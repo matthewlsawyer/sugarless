@@ -1,3 +1,5 @@
+@gray : #ccc;
+
 * {
   margin : 0;
   padding : 0;
@@ -6,6 +8,30 @@
 html,
 body {
   height : 100%;
+}
+
+h1 {
+  margin-top : -2px;
+}
+
+h2 {
+  margin-top : 3px;
+}
+
+h3 {
+  margin-top : 6px;
+}
+
+h4 {
+  margin-top : 9px;
+}
+
+h5 {
+  margin-top : 10px;
+}
+
+h6 {
+  margin-top : 13px;
 }
 
 .clearfix {
@@ -22,15 +48,23 @@ body {
 
 header {
   padding : 10px;
-  & > *:first-child,
-  & > *.left {
-    float : left !important;
+  & > * {
+    float : left;
+    margin-right : 20px;
   }
-  & > *,
   & > *.right {
     float : right;
+    margin : 0;
+  }
+  nav {
+    margin-top : 9px;
+    & ul li,
+    & ol li {
+      display : inline;
+    }
   }
   .clearfix();
+  border-bottom : 1px solid @gray;
 }
 
 input,
