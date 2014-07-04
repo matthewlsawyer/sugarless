@@ -10,6 +10,9 @@ body {
   height : 100%;
 }
 
+/**
+ * Float fix hack.
+ */
 .clearfix {
   &:before,
   &:after {
@@ -22,38 +25,40 @@ body {
   *zoom : 1;
 }
 
+/**
+ * Default stylings for the header tag.
+ */
 header {
-  padding : 10px;
+  padding : 10px 0;
+  // all elements float left
   & > * {
     float : left;
-    margin : 0 20px 0 0;
+    display : block;
+    margin : 0 10px;
   }
-  & > *.right {
+  // forms float right
+  & > form {
     float : right;
-    margin : 0;
   }
-  nav {
+  // navs have special behavior
+  & > nav {
     margin-top : 9px;
+    margin-bottom : 10px;
     & ul li,
     & ol li {
       display : inline;
+      margin-right : 2px;
     }
   }
-  .heading(@heading, @top) {
-    @{heading} {
-      margin-top : @top;
-    }
-  }
-  .heading(h1, -2px);
-  .heading(h2, 3px);
-  .heading(h3, 6px);
-  .heading(h4, 9px);
-  .heading(h5, 10px);
-  .heading(h6, 13px);
-  .clearfix();
+  // nice looking border
   border-bottom : 1px solid @gray;
+  // fix the floats
+  .clearfix();
 }
 
+/**
+ * Input elements spaced nicely.
+ */
 input,
 textarea,
 select {
@@ -61,6 +66,9 @@ select {
   padding : 6px 12px;
 }
 
+/**
+ * Buttons sized nicely.
+ */
 button {
   padding : 6px 12px;
 }
