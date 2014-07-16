@@ -1,14 +1,9 @@
+/**
+ * Embedded normalize.css for css resets.
+ */
+@import (inline) "normalize.css";
+
 @gray : #ccc;
-
-* {
-  margin : 0;
-  padding : 0;
-}
-
-html,
-body {
-  height : 100%;
-}
 
 /**
  * Float fix hack.
@@ -30,24 +25,25 @@ body {
  */
 header {
   padding : 10px 0;
+	min-height : 40px;
   // all elements float left
   & > * {
     float : left;
-    display : block;
+    display : inline;
     margin : 0 10px;
   }
-  // but forms float right
-  & > form {
+  // float right with a class
+  & > *.right {
     float : right;
   }
   // navs have special behavior
   & > nav {
-    margin-top : 9px;
-    margin-bottom : 10px;
+  	margin-top : -6px;
+		margin-bottom : -5px;
     & ul li,
     & ol li {
-      display : inline;
-      margin-right : 2px;
+			display : inline;
+     	margin-right : 5px;
     }
   }
   // nice looking border
