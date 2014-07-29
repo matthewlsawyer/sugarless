@@ -3,8 +3,11 @@
  */
 @import (inline) "normalize/normalize.css";
 
+// max number of columns in a row
+@max-row-columns : 12;
+
 /**
- * Float fix hack.
+ * Clearfix
  */
 .clearfix {
   &:before,
@@ -18,17 +21,26 @@
   *zoom : 1;
 }
 
+/**
+ * A grid of rows and columns.
+ */
 .grid {
   & > .row {
+    // recursively generate the rows
     .row();
     .clearfix();
   }
   .clearfix();
 }
 
-.row(@columns : 1) when (@columns <= 12) {
+/**
+ * Horizontal rows in a grid. Allows for
+ * column count to be defined, up to @max-row-columns.
+ */
+.row(@columns : 1) when (@columns <= @max-row-columns) {
   &.row-@{columns} {
     & > .column {
+      // recursively generate the columns
       .column(@columns);
       overflow-x : hidden;
     }
@@ -36,11 +48,17 @@
   .row(@columns : (@columns + 1));
 }
 
+/**
+ * Columns in a row. Relative size is calculated
+ * based on the number of columns in the row.
+ */
 .column(@columns, @width : 1) when (@width <= @columns) {
   &.column-@{width} {
-    position : relative;
     float : left;
     width : percentage(@width / @columns); 
+  }
+  &.column-offset-@{width} {
+    margin-left : percentage(@width / @columns);
   }
   .column(@columns, @width : (@width + 1));
 }
