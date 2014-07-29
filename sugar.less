@@ -4,16 +4,6 @@
 @import (inline) "normalize/normalize.css";
 
 /**
- * Custom resets.
- */
-ul {
-	padding : 0;
-	margin : 0;
-}
-
-@gray : #ccc;
-
-/**
  * Float fix hack.
  */
 .clearfix {
@@ -28,60 +18,30 @@ ul {
   *zoom : 1;
 }
 
-/**
- * Default stylings for the header tag.
- */
-header {
-  padding : 10px 0;
-	min-height : 40px;
-	position : fixed;
-	top : 0;
-	left : 0;
-	width : 100%;
-  // all elements float left
-  & > * {
-    float : left;
-    display : inline;
-    margin : 0 10px;
-		min-height : 40px;
+.grid {
+  & > .row {
+    .row();
+    .clearfix();
   }
-  // float right with a class
-  & > *.right {
-    float : right;
-  }
-  // navs have special behavior
-  & > nav {
-		& ul,
-		& ol {
-			height : 30px;
-			padding-top : 9px;
-		}
-    & ul li,
-    & ol li {
-			display : inline;
-     	margin-right : 5px;
-    }
-  }
-  // nice looking border
-  border-bottom : 1px solid @gray;
-  // fix the floats
   .clearfix();
 }
 
-/**
- * Input elements spaced nicely.
- */
-input,
-textarea,
-select {
-  height : 19px;
-  padding : 6px 12px;
+.row(@columns : 1) when (@columns <= 12) {
+  &.row-@{columns} {
+    & > .column {
+      .column(@columns);
+      overflow-x : hidden;
+    }
+  }
+  .row(@columns : (@columns + 1));
 }
 
-/**
- * Buttons sized nicely.
- */
-button {
-  padding : 6px 12px;
+.column(@columns, @width : 1) when (@width <= @columns) {
+  &.column-@{width} {
+    position : relative;
+    float : left;
+    width : percentage(@width / @columns); 
+  }
+  .column(@columns, @width : (@width + 1));
 }
 
