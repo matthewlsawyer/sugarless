@@ -26,9 +26,8 @@
  */
 .grid {
   & > .row {
-    // recursively generate the rows
+    // generate the rows
     .row();
-    .clearfix();
   }
   .clearfix();
 }
@@ -37,14 +36,19 @@
  * Horizontal rows in a grid. Allows for
  * column count to be defined, up to @max-row-columns.
  */
+.grid > .row {
+	.clearfix();
+}
+
+// mixin for generating rows
 .row(@columns : 1) when (@columns <= @max-row-columns) {
   &.row-@{columns} {
     & > .column {
-      // recursively generate the columns
+      // generate the columns
       .column(@columns);
-      overflow-x : hidden;
     }
   }
+	// recurse
   .row(@columns : (@columns + 1));
 }
 
@@ -52,14 +56,29 @@
  * Columns in a row. Relative size is calculated
  * based on the number of columns in the row.
  */
+.grid > .row > .column {
+	overflow-x : hidden;
+}
+
+// mixin for generating columns
 .column(@columns, @width : 1) when (@width <= @columns) {
   &.column-@{width} {
-    float : left;
-    width : percentage(@width / @columns); 
+		.column-fn(@columns, @width);
   }
   &.column-offset-@{width} {
-    margin-left : percentage(@width / @columns);
+		.column-offset-fn(@columns, @width);
   }
+	// recurse
   .column(@columns, @width : (@width + 1));
 }
 
+// mixin for sizing
+.column-fn(@columns, @width) when (@width <= @columns) {
+	float : left;
+  width : percentage(@width / @columns); 
+}
+
+// mixin for offset
+.column-offset-fn(@columns, @width) when (@width < @columns) {
+	margin-left : percentage(@width / @columns);
+}
