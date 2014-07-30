@@ -37,7 +37,7 @@
  * column count to be defined, up to @max-row-columns.
  */
 .grid > .row {
-	.clearfix();
+  .clearfix();
 }
 
 // mixin for generating rows
@@ -48,7 +48,7 @@
       .column(@columns);
     }
   }
-	// recurse
+  // recurse
   .row(@columns : (@columns + 1));
 }
 
@@ -57,28 +57,28 @@
  * based on the number of columns in the row.
  */
 .grid > .row > .column {
-	overflow-x : hidden;
+  overflow-x : hidden;
 }
 
 // mixin for generating columns
 .column(@columns, @width : 1) when (@width <= @columns) {
   &.column-@{width} {
-		.column-fn(@columns, @width);
+    .column-fn(@columns, @width);
   }
   &.column-offset-@{width} {
-		.column-offset-fn(@columns, @width);
+    .column-offset-fn(@columns, @width);
   }
-	// recurse
+  // recurse
   .column(@columns, @width : (@width + 1));
 }
 
 // mixin for sizing
 .column-fn(@columns, @width) when (@width <= @columns) {
-	float : left;
-	width : percentage(@width / @columns); 
+  float : left;
+  width : percentage(@width / @columns); 
 }
 
 // mixin for offset
 .column-offset-fn(@columns, @width) when (@width < @columns) {
-	margin-left : percentage(@width / @columns);
+  margin-left : percentage(@width / @columns);
 }
