@@ -6,6 +6,9 @@
 // max number of columns in a row
 @max-row-columns : 12;
 
+// column left and right margin
+@column-margin : 5px;
+
 /**
  * Clearfix
  */
@@ -58,6 +61,7 @@
  */
 .grid > .row > .column {
   overflow-x : hidden;
+  margin : 0 @column-margin;
 }
 
 // mixin for generating columns
@@ -74,11 +78,14 @@
 
 // mixin for sizing
 .column-fn(@columns, @width) when (@width <= @columns) {
+  @percent : percentage(@width / @columns);
+  @offset : @column-margin * 2;
   float : left;
-  width : percentage(@width / @columns); 
+  width : calc(~'@{percent} - @{offset}');
 }
 
 // mixin for offset
 .column-offset-fn(@columns, @width) when (@width < @columns) {
-  margin-left : percentage(@width / @columns);
+  @percent : percentage(@width / @columns);
+  margin-left : calc(~'@{percent} + @{column-margin}');
 }
