@@ -60,6 +60,7 @@
  * based on the number of columns in the row.
  */
 .grid > .row > .column {
+  float : left;
   overflow-x : hidden;
   margin : 0 @column-margin;
 }
@@ -80,12 +81,19 @@
 .column-fn(@columns, @width) when (@width <= @columns) {
   @percent : percentage(@width / @columns);
   @offset : @column-margin * 2;
-  float : left;
+  // percentage size minus margin
   width : calc(~'@{percent} - @{offset}');
+  width : -o-calc(~'@{percent} - @{offset}');
+  width : -moz-calc(~'@{percent} - @{offset}');
+  width : -webkit-calc(~'@{percent} - @{offset}');
 }
 
 // mixin for offset
 .column-offset-fn(@columns, @width) when (@width < @columns) {
   @percent : percentage(@width / @columns);
+  // percentage size of the offset column plus normal left margin
   margin-left : calc(~'@{percent} + @{column-margin}');
+  margin-left : -o-calc(~'@{percent} + @{column-margin}');
+  margin-left : -moz-calc(~'@{percent} + @{column-margin}');
+  margin-left : -webkit-calc(~'@{percent} + @{column-margin}');
 }
