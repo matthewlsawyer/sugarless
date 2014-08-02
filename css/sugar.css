@@ -428,20 +428,6 @@ th {
 }
 
 /**
- * Clearfix
- */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-/**
  * A grid of rows and columns.
  */
 .grid {
@@ -1342,4 +1328,18 @@ th {
   float: left;
   overflow-x: hidden;
   margin: 0 5px;
+}
+/**
+ * Clearfix for float resets.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }

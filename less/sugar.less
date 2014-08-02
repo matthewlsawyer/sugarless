@@ -3,14 +3,10 @@
  */
 @import (inline) "normalize/normalize.css";
 
-// max number of columns in a row
-@max-row-columns : 12;
-
-// column left and right margin
-@column-margin : 5px;
+@import "grid.less";
 
 /**
- * Clearfix
+ * Clearfix for float resets.
  */
 .clearfix {
   &:before,
@@ -22,78 +18,4 @@
     clear : both;
   }
   *zoom : 1;
-}
-
-/**
- * A grid of rows and columns.
- */
-.grid {
-  & > .row {
-    // generate the rows
-    .row();
-  }
-  .clearfix();
-}
-
-/**
- * Horizontal rows in a grid. Allows for
- * column count to be defined, up to @max-row-columns.
- */
-.grid > .row {
-  .clearfix();
-}
-
-// mixin for generating rows
-.row(@columns : 1) when (@columns <= @max-row-columns) {
-  &.row-@{columns} {
-    & > .column {
-      // generate the columns
-      .column(@columns);
-    }
-  }
-  // recurse
-  .row(@columns : (@columns + 1));
-}
-
-/**
- * Columns in a row. Relative size is calculated
- * based on the number of columns in the row.
- */
-.grid > .row > .column {
-  float : left;
-  overflow-x : hidden;
-  margin : 0 @column-margin;
-}
-
-// mixin for generating columns
-.column(@columns, @width : 1) when (@width <= @columns) {
-  &.column-@{width} {
-    .column-fn(@columns, @width);
-  }
-  &.column-offset-@{width} {
-    .column-offset-fn(@columns, @width);
-  }
-  // recurse
-  .column(@columns, @width : (@width + 1));
-}
-
-// mixin for sizing
-.column-fn(@columns, @width) when (@width <= @columns) {
-  @percent : percentage(@width / @columns);
-  @offset : @column-margin * 2;
-  // percentage size minus margin
-  width : calc(~'@{percent} - @{offset}');
-  width : -o-calc(~'@{percent} - @{offset}');
-  width : -moz-calc(~'@{percent} - @{offset}');
-  width : -webkit-calc(~'@{percent} - @{offset}');
-}
-
-// mixin for offset
-.column-offset-fn(@columns, @width) when (@width < @columns) {
-  @percent : percentage(@width / @columns);
-  // percentage size of the offset column plus normal left margin
-  margin-left : calc(~'@{percent} + @{column-margin}');
-  margin-left : -o-calc(~'@{percent} + @{column-margin}');
-  margin-left : -moz-calc(~'@{percent} + @{column-margin}');
-  margin-left : -webkit-calc(~'@{percent} + @{column-margin}');
 }
