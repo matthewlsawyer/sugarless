@@ -3,20 +3,8 @@
  */
 @import (inline) "normalize/normalize.css";
 
-/**
- * Clearfix for float resets.
- */
-.clearfix {
-  &:before,
-  &:after {
-    content : " ";
-    display : table;
-  }
-  &:after {
-    clear : both;
-  }
-  *zoom : 1;
-}
-
+// import modules
+@import "base.less";
+@import "header.less";
 @import "grid.less";
 

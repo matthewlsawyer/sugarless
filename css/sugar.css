@@ -428,6 +428,13 @@ th {
 }
 
 /**
+ * Custom resets.
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+/**
  * Clearfix for float resets.
  */
 .clearfix {
@@ -440,6 +447,37 @@ th {
 }
 .clearfix:after {
   clear: both;
+}
+/**
+ * Normal header.
+ */
+.header {
+  height: 40px;
+  padding: 5px;
+  min-width: 960px;
+  *zoom: 1;
+}
+.header:before,
+.header:after {
+  content: " ";
+  display: table;
+}
+.header:after {
+  clear: both;
+}
+/**
+ * Fixed header.
+ */
+.header.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-y: hidden;
+}
+.header-fixed-offset {
+  height: 50px;
 }
 /**
  * A grid of rows and columns.
