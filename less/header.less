@@ -1,16 +1,29 @@
 
 // default header height
 @header-height : 50px;
+
 // default header background
+// adjust as needed
+// TODO expose on an api
 @header-background-color : #fff;
 
 /**
  * Normal header.
  */
 .header {
-  height : @header-height - 10px;
-  padding : 5px;
-  min-width : @page-width;
+  height : @header-height;
+}
+
+/**
+ * Content inside a header should 
+ * be sized with the page.
+ */
+.header > .header-content {
+  @padding : 5px;
+  height : @header-height - (@padding * 2);
+  padding : @padding;
+  overflow : hidden;
+  .simplesize();
   .clearfix();
 }
 
@@ -23,8 +36,6 @@
   left : 0;
   right : 0;
   background-color : @header-background-color;
-  // to make sure you don't go over offset
-  overflow-y : hidden;
 }
 
 // height offset at top of page for fixed headers

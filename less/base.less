@@ -28,3 +28,18 @@
 
 // page width
 @page-width : 960px;
+@page-min-width : 800px;
+
+// mixin for page sizing
+.simplesize() {
+  max-width : @page-width;
+  min-width : @page-min-width;
+  margin : 0 auto;
+}
+
+/**
+ * Container for sizing elements on the page.
+ */
+.container {
+  .simplesize();
+}

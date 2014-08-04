@@ -449,20 +449,38 @@ th {
   clear: both;
 }
 /**
+ * Container for sizing elements on the page.
+ */
+.container {
+  max-width: 960px;
+  min-width: 800px;
+  margin: 0 auto;
+}
+/**
  * Normal header.
  */
 .header {
+  height: 50px;
+}
+/**
+ * Content inside a header should 
+ * be sized with the page.
+ */
+.header > .header-content {
   height: 40px;
   padding: 5px;
-  min-width: 960px;
+  overflow: hidden;
+  max-width: 960px;
+  min-width: 800px;
+  margin: 0 auto;
   *zoom: 1;
 }
-.header:before,
-.header:after {
+.header > .header-content:before,
+.header > .header-content:after {
   content: " ";
   display: table;
 }
-.header:after {
+.header > .header-content:after {
   clear: both;
 }
 /**
@@ -474,7 +492,6 @@ th {
   left: 0;
   right: 0;
   background-color: #ffffff;
-  overflow-y: hidden;
 }
 .header-fixed-offset {
   height: 50px;
