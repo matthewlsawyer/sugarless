@@ -457,13 +457,15 @@ th {
 .right {
   float: right;
 }
-.list-inline > li {
+ol.list-inline > li,
+ul.list-inline > li {
   display: inline-block;
 }
 /**
  * Container for sizing elements on the page.
  */
 .container {
+  padding: 5px;
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;
@@ -471,6 +473,7 @@ th {
 /**
  * Normal header.
  */
+header,
 .header {
   height: 50px;
 }
@@ -478,6 +481,7 @@ th {
  * Content inside a header should 
  * be sized with the page.
  */
+header > .header-content,
 .header > .header-content {
   height: 40px;
   padding: 5px;
@@ -487,17 +491,21 @@ th {
   margin: 0 auto;
   *zoom: 1;
 }
+header > .header-content:before,
 .header > .header-content:before,
+header > .header-content:after,
 .header > .header-content:after {
   content: " ";
   display: table;
 }
+header > .header-content:after,
 .header > .header-content:after {
   clear: both;
 }
 /**
  * Fixed header.
  */
+header.header-fixed,
 .header.header-fixed {
   position: fixed;
   top: 0;
@@ -1391,6 +1399,8 @@ th {
  * column count to be defined, up to @max-row-columns.
  */
 .grid > .row {
+  margin-left: -5px;
+  margin-right: -5px;
   *zoom: 1;
 }
 .grid > .row:before,
@@ -1408,5 +1418,6 @@ th {
 .grid > .row > .column {
   float: left;
   overflow-x: hidden;
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }

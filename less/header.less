@@ -10,6 +10,7 @@
 /**
  * Normal header.
  */
+header,
 .header {
   height : @header-height;
 }
@@ -18,6 +19,7 @@
  * Content inside a header should 
  * be sized with the page.
  */
+header > .header-content,
 .header > .header-content {
   @padding : 5px;
   height : @header-height - (@padding * 2);
@@ -30,6 +32,7 @@
 /**
  * Fixed header.
  */
+header.header-fixed,
 .header.header-fixed {
   position : fixed;
   top : 0;
