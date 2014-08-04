@@ -449,6 +449,18 @@ th {
   clear: both;
 }
 /**
+ * Helper classes.
+ */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.list-inline > li {
+  display: inline-block;
+}
+/**
  * Container for sizing elements on the page.
  */
 .container {
