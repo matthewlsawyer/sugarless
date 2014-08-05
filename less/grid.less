@@ -9,9 +9,6 @@
   .clearfix();
 }
 
-// column left and right margin
-@column-margin : 5px;
-
 /**
  * Horizontal rows in a grid. Allows for
  * column count to be defined, up to @max-row-columns.
@@ -21,9 +18,6 @@
 	margin-right : -@column-margin;
   .clearfix();
 }
-
-// max number of columns in a row
-@max-row-columns : 12;
 
 // mixin for generating rows
 .row(@columns : 1) when (@columns <= @max-row-columns) {

@@ -11,6 +11,11 @@
   padding : 0;
 }
 
+html {
+  min-height : 100%;
+  position : relative;
+}
+
 /**
  * Clearfix for float resets.
  */
@@ -37,14 +42,11 @@
   float : right;
 }
 
+// inline list
 ol.list-inline > li, 
 ul.list-inline > li {
   display : inline-block 
 }
-
-// page width
-@page-width : 960px;
-@page-min-width : 800px;
 
 // mixin for page sizing
 .simplesize() {

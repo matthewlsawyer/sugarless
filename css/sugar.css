@@ -1,4 +1,7 @@
 /**
+ * Global vars for page layouts.
+ */
+/**
  * Embedded normalize.css for css resets.
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -433,6 +436,10 @@ th {
 * {
   margin: 0;
   padding: 0;
+}
+html {
+  min-height: 100%;
+  position: relative;
 }
 /**
  * Clearfix for float resets.
@@ -1420,4 +1427,38 @@ header.header-fixed,
   overflow-x: hidden;
   margin-left: 5px;
   margin-right: 5px;
+}
+footer,
+.footer {
+  height: 50px;
+}
+footer > .footer-content,
+.footer > .footer-content {
+  height: 40px;
+  padding: 5px;
+  overflow: hidden;
+  max-width: 960px;
+  min-width: 800px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+footer > .footer-content:before,
+.footer > .footer-content:before,
+footer > .footer-content:after,
+.footer > .footer-content:after {
+  content: " ";
+  display: table;
+}
+footer > .footer-content:after,
+.footer > .footer-content:after {
+  clear: both;
+}
+.footer-sticky-push {
+  height: 50px;
+}
+footer.footer-sticky,
+.footer.footer-sticky {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

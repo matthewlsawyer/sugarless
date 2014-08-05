@@ -1,0 +1,25 @@
+footer,
+.footer {
+  height : @footer-height;
+}
+
+footer > .footer-content,
+.footer > .footer-content {
+  @padding : 5px;
+  height : @footer-height - (@padding * 2);
+  padding : @padding;
+  overflow : hidden;
+  .simplesize();
+  .clearfix();
+}
+
+.footer-sticky-push {
+  height : @footer-height; 
+}
+
+footer.footer-sticky,
+.footer.footer-sticky {
+  position : absolute;
+  width : 100%;
+  bottom : 0;
+}
