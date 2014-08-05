@@ -510,7 +510,9 @@ header > .header-content:after,
   clear: both;
 }
 /**
- * Fixed header.
+ * Fixed header that remains at the top
+ * of the page and will overlap content
+ * beneath it.
  */
 header.header-fixed,
 .header.header-fixed {
@@ -520,7 +522,11 @@ header.header-fixed,
   right: 0;
   background-color: #ffffff;
 }
-.header-fixed-offset {
+/**
+ * Element to push the top of the page content 
+ * down if a fixed header is used.
+ */
+.header-fixed-push {
   height: 50px;
 }
 /**
@@ -1428,6 +1434,9 @@ header.header-fixed,
   margin-left: 5px;
   margin-right: 5px;
 }
+/*
+ * Styling for footers.
+ */
 footer,
 .footer {
   height: 50px;
@@ -1453,9 +1462,18 @@ footer > .footer-content:after,
 .footer > .footer-content:after {
   clear: both;
 }
+/**
+ * Element to push the footer down so it doesn't
+ * overlap the page content if a sticky footer is used.
+ */
 .footer-sticky-push {
   height: 50px;
 }
+/**
+ * Specifies that the footer is sticky; that
+ * it should stay on the bottom of the page,
+ * but also that it should not overlap the context.
+ */
 footer.footer-sticky,
 .footer.footer-sticky {
   position: absolute;

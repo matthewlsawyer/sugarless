@@ -1,3 +1,7 @@
+/*
+ * Styling for footers.
+ */
+
 footer,
 .footer {
   height : @footer-height;
@@ -13,10 +17,19 @@ footer > .footer-content,
   .clearfix();
 }
 
+/**
+ * Element to push the footer down so it doesn't
+ * overlap the page content if a sticky footer is used.
+ */
 .footer-sticky-push {
   height : @footer-height; 
 }
 
+/**
+ * Specifies that the footer is sticky; that
+ * it should stay on the bottom of the page,
+ * but also that it should not overlap the context.
+ */
 footer.footer-sticky,
 .footer.footer-sticky {
   position : absolute;

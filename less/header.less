@@ -21,7 +21,9 @@ header > .header-content,
 }
 
 /**
- * Fixed header.
+ * Fixed header that remains at the top
+ * of the page and will overlap content
+ * beneath it.
  */
 header.header-fixed,
 .header.header-fixed {
@@ -32,7 +34,10 @@ header.header-fixed,
   background-color : @header-background-color;
 }
 
-// height offset at top of page for fixed headers
-.header-fixed-offset {
+/**
+ * Element to push the top of the page content 
+ * down if a fixed header is used.
+ */
+.header-fixed-push {
   height : @header-height;
 }
