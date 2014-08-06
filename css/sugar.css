@@ -481,16 +481,21 @@ ul.list-inline > li {
   margin: 0 auto;
 }
 /**
- * Normal header.
+ * Header styling
  */
 header,
 .header {
   height: 50px;
+  border-bottom: 1px solid #dddddd;
 }
-/**
- * Content inside a header should 
- * be sized with the page.
- */
+header.header-fixed,
+.header.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
 header > .header-content,
 .header > .header-content {
   height: 40px;
@@ -511,19 +516,6 @@ header > .header-content:after,
 header > .header-content:after,
 .header > .header-content:after {
   clear: both;
-}
-/**
- * Fixed header that remains at the top
- * of the page and will overlap content
- * beneath it.
- */
-header.header-fixed,
-.header.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #ffffff;
 }
 /**
  * Element to push the top of the page content 
@@ -1463,6 +1455,13 @@ header.header-fixed,
 footer,
 .footer {
   height: 50px;
+  border-top: 1px solid #dddddd;
+}
+footer.footer-sticky,
+.footer.footer-sticky {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 footer > .footer-content,
 .footer > .footer-content {
@@ -1491,15 +1490,4 @@ footer > .footer-content:after,
  */
 .footer-sticky-push {
   height: 50px;
-}
-/**
- * Specifies that the footer is sticky; that
- * it should stay on the bottom of the page,
- * but also that it should not overlap the context.
- */
-footer.footer-sticky,
-.footer.footer-sticky {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
 }

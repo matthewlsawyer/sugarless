@@ -1,37 +1,25 @@
 /**
- * Normal header.
+ * Header styling
  */
 header,
 .header {
   height : @header-height;
-}
-
-/**
- * Content inside a header should 
- * be sized with the page.
- */
-header > .header-content,
-.header > .header-content {
-  @padding : 5px;
-  height : @header-height - (@padding * 2);
-  padding : @padding;
-  overflow : hidden;
-  .simplesize();
-  .clearfix();
-}
-
-/**
- * Fixed header that remains at the top
- * of the page and will overlap content
- * beneath it.
- */
-header.header-fixed,
-.header.header-fixed {
-  position : fixed;
-  top : 0;
-  left : 0;
-  right : 0;
-  background-color : @header-background-color;
+  border-bottom : 1px solid @header-border-color;
+  // remains on top and overlaps content
+  &.header-fixed {
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    background-color : @header-background-color;
+  }
+  & > .header-content {
+    height : @header-height - (@padding * 2);
+    padding : @padding;
+    overflow : hidden;
+    .simplesize();
+    .clearfix();
+  }
 }
 
 /**

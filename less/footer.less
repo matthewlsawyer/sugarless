@@ -1,20 +1,24 @@
 /*
  * Styling for footers.
  */
-
 footer,
 .footer {
   height : @footer-height;
-}
-
-footer > .footer-content,
-.footer > .footer-content {
-  @padding : 5px;
-  height : @footer-height - (@padding * 2);
-  padding : @padding;
-  overflow : hidden;
-  .simplesize();
-  .clearfix();
+  border-top : 1px solid @footer-border-color;
+  // should stay on the bottom of the page
+  // but should not overlap the context
+  &.footer-sticky {
+    position : absolute;
+    width : 100%;
+    bottom : 0;
+  }
+  & > .footer-content {
+    height : @footer-height - (@padding * 2);
+    padding : @padding;
+    overflow : hidden;
+    .simplesize();
+    .clearfix();
+  }
 }
 
 /**
@@ -25,14 +29,3 @@ footer > .footer-content,
   height : @footer-height; 
 }
 
-/**
- * Specifies that the footer is sticky; that
- * it should stay on the bottom of the page,
- * but also that it should not overlap the context.
- */
-footer.footer-sticky,
-.footer.footer-sticky {
-  position : absolute;
-  width : 100%;
-  bottom : 0;
-}
