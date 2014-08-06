@@ -1,0 +1,22 @@
+/**
+ * Panel component that contains data in a bordered panel.
+ */
+
+.panel {
+	border : 1px solid @border-color;
+	background-color : @panel-background-color;
+	border-radius : @border-radius;
+	margin-bottom : @margin;
+  & > .panel-header {
+    padding : @padding;
+	  border-bottom : 1px solid @border-color;
+  }
+  & > .panel-body {
+	  padding : @padding;
+  }
+  & > .panel-footer {
+	  padding : @padding;
+	  border-top : 1px solid @border-color;
+  }
+}
+

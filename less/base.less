@@ -42,10 +42,19 @@ html {
   float : right;
 }
 
+.inline {
+  display : inline;
+}
+
+.inline-block {
+  display : inline-block;
+}
+
 // inline list
-ol.list-inline > li, 
-ul.list-inline > li {
-  display : inline-block 
+ol, ul {
+  &.list-inline > li {
+    .inline-block();
+  }
 }
 
 // mixin for page sizing

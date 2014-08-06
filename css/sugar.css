@@ -1,7 +1,4 @@
 /**
- * Global vars for page layouts.
- */
-/**
  * Embedded normalize.css for css resets.
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -463,6 +460,12 @@ html {
 }
 .right {
   float: right;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
 }
 ol.list-inline > li,
 ul.list-inline > li {
@@ -1433,6 +1436,26 @@ header.header-fixed,
   overflow-x: hidden;
   margin-left: 5px;
   margin-right: 5px;
+}
+/**
+ * Panel component that contains data in a bordered panel.
+ */
+.panel {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.panel > .panel-header {
+  padding: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+.panel > .panel-body {
+  padding: 5px;
+}
+.panel > .panel-footer {
+  padding: 5px;
+  border-top: 1px solid #dddddd;
 }
 /*
  * Styling for footers.
