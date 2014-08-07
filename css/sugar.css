@@ -449,7 +449,7 @@ img {
   display: block;
 }
 /**
- * Helper classes.
+ * Helper classes
  */
 .clearfix {
   *zoom: 1;
@@ -474,9 +474,14 @@ img {
 .inline-block {
   display: inline-block;
 }
-ol.list-inline > li,
-ul.list-inline > li {
-  display: inline-block;
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 /**
  * Vertical aligning works by using table
@@ -1515,6 +1520,13 @@ input {
   border: 1px solid #dddddd;
   border-radius: 5px;
   vertical-align: middle;
+}
+/**
+ * List styles
+ */
+ol.list-inline > li,
+ul.list-inline > li {
+  display: inline-block;
 }
 /**
  * Table styling for responsiveness.

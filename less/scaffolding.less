@@ -1,9 +1,4 @@
 /**
- * Embedded normalize.css for css resets.
- */
-@import (inline) "normalize/normalize.css";
-
-/**
  * Scaffolding
  */
 * {
@@ -29,7 +24,7 @@ img {
 }
 
 /**
- * Helper classes.
+ * Helper classes
  */
 // float resets
 .clearfix {
@@ -60,11 +55,16 @@ img {
   display : inline-block;
 }
 
-// inline list
-ol, ul {
-  &.list-inline > li {
-    .inline-block();
-  }
+.text-left {
+  text-align : left;
+}
+
+.text-center {
+  text-align : center;
+}
+
+.text-right {
+  text-align : right;
 }
 
 /**
