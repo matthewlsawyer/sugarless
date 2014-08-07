@@ -1502,14 +1502,15 @@ button:active {
 }
 .panel > .panel-header {
   padding: 5px;
-  background-color: #f5f5f5;
+  border-bottom: 1px solid #dddddd;
 }
 .panel > .panel-body {
   padding: 5px;
+  background-color: #f5f5f5;
 }
 .panel > .panel-footer {
   padding: 5px;
-  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
 }
 /**
  * Form styling
