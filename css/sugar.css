@@ -1487,6 +1487,18 @@ button:active {
   border-top: 1px solid #dddddd;
 }
 /**
+ * Form styling
+ */
+input {
+  display: inline-block;
+  height: 32.00000001px;
+  padding: 5px 10px;
+  background-image: none;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+/**
  * Table styling for responsiveness.
  */
 table {
