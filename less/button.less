@@ -1,0 +1,23 @@
+/**
+ * Buttons
+ */
+
+button {
+  text-align : center;
+  vertical-align : middle;
+  cursor : pointer;
+  background-image : none;
+  white-space : nowrap;
+  padding : @padding @padding * 2;
+  font-size : @font-size;
+  line-height : @line-height;
+  border-radius : @border-radius;
+  border : 1px solid @button-border-color;
+  background-color : @button-background-color;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color : darken(@button-background-color, 10%);
+    border-color : darken(@button-border-color, 10%);
+  }
+}

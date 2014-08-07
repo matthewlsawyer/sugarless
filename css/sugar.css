@@ -428,18 +428,27 @@ th {
 }
 
 /**
- * Custom resets.
+ * Scaffolding
  */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html {
-  min-height: 100%;
+  min-height: calc(99%);
   position: relative;
 }
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+}
+img {
+  display: block;
+}
 /**
- * Clearfix for float resets.
+ * Helper classes.
  */
 .clearfix {
   *zoom: 1;
@@ -452,9 +461,6 @@ html {
 .clearfix:after {
   clear: both;
 }
-/**
- * Helper classes.
- */
 .left {
   float: left;
 }
@@ -471,8 +477,14 @@ ol.list-inline > li,
 ul.list-inline > li {
   display: inline-block;
 }
+.vertical-align {
+  /* the parent must be position relative */
+}
 /**
- * Container for sizing elements on the page.
+ * Mixins
+ */
+/**
+ * Components
  */
 .container {
   padding: 5px;
@@ -486,6 +498,7 @@ ul.list-inline > li {
 header,
 .header {
   height: 50px;
+  position: relative;
   border-bottom: 1px solid #dddddd;
 }
 header.header-fixed,
@@ -498,7 +511,7 @@ header.header-fixed,
 }
 header > .header-content,
 .header > .header-content {
-  height: 40px;
+  height: inherit;
   padding: 5px;
   overflow: hidden;
   max-width: 960px;
@@ -525,9 +538,32 @@ header > .header-content:after,
   height: 50px;
 }
 /**
+ * Buttons
+ */
+button {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  background-color: #f5f5f5;
+}
+button:hover,
+button:focus,
+button:active {
+  background-color: #dcdcdc;
+  border-color: #c4c4c4;
+}
+/**
  * A grid of rows and columns.
  */
 .grid {
+  margin-bottom: 5px;
   *zoom: 1;
 }
 .grid > .row.row-1 > .column.column-1 {
@@ -1450,6 +1486,39 @@ header > .header-content:after,
   padding: 5px;
   border-top: 1px solid #dddddd;
 }
+/**
+ * Table styling for responsiveness.
+ */
+table {
+  width: 100%;
+  margin-bottom: 5px;
+}
+table.table-dashboard {
+  table-layout: fixed;
+  white-space: nowrap;
+}
+table.table-dashboard tr {
+  border: 1px solid #dddddd;
+  border-left: medium solid #dddddd;
+  cursor: pointer;
+}
+table.table-dashboard tr:hover {
+  border-left: medium solid #919191;
+}
+table.table-dashboard tr > td {
+  padding: 5px;
+  vertical-align: middle !important;
+}
+table.table-dashboard tr > td.cell-thumb {
+  width: 60px;
+}
+table.table-dashboard tr > td.cell-content {
+  overflow: hidden;
+}
+table.table-dashboard tr > td.cell-status {
+  width: 60px;
+  text-align: center;
+}
 /*
  * Styling for footers.
  */
@@ -1466,7 +1535,7 @@ footer.footer-sticky,
 }
 footer > .footer-content,
 .footer > .footer-content {
-  height: 40px;
+  height: inherit;
   padding: 5px;
   overflow: hidden;
   max-width: 960px;

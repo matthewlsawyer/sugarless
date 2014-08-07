@@ -4,21 +4,33 @@
 @import (inline) "normalize/normalize.css";
 
 /**
- * Custom resets.
+ * Scaffolding
  */
 * {
   margin : 0;
   padding : 0;
+  box-sizing : border-box;
 }
 
 html {
-  min-height : 100%;
+  min-height : calc(100% - 1px);
   position : relative;
 }
 
+body {
+  font-size : @font-size;
+  line-height : @line-height;
+  color : @text-color;
+}
+
+img {
+  display : block;
+}
+
 /**
- * Clearfix for float resets.
+ * Helper classes.
  */
+// float resets
 .clearfix {
   &:before,
   &:after {
@@ -31,9 +43,6 @@ html {
   *zoom : 1;
 }
 
-/**
- * Helper classes.
- */
 .left {
   float : left;
 }
@@ -57,7 +66,20 @@ ol, ul {
   }
 }
 
-// mixin for page sizing
+// vertical align an element
+.vertical-align {
+  /* the parent must be position relative */
+  //position : absolute;
+  //top : 50%;
+  //transform : translateY(-50%);
+  //-ms-transform : translateY(-50%);
+  //-webkit-transform : translateY(-50%);
+}
+
+/**
+ * Mixins
+ */
+// semi-responsive sizing
 .simplesize() {
   max-width : @page-width;
   min-width : @page-min-width;
@@ -65,7 +87,7 @@ ol, ul {
 }
 
 /**
- * Container for sizing elements on the page.
+ * Components
  */
 .container {
 	padding : @padding;
