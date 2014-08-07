@@ -4,16 +4,20 @@
 footer,
 .footer {
   height : @footer-height;
+  width : 100%;
+  min-width : @page-min-width;
   border-top : 1px solid @footer-border-color;
+  position : relative;
   // should stay on the bottom of the page
   // but should not overlap the context
   &.footer-sticky {
     position : absolute;
-    width : 100%;
     bottom : 0;
   }
   & > .footer-content {
     height : inherit;
+    width : inherit;
+    position : relative;
     padding : @padding;
     overflow : hidden;
     .simplesize();

@@ -4,6 +4,8 @@
 header,
 .header {
   height : @header-height;
+  width : 100%;
+  min-width : @page-min-width;
   position : relative;
   border-bottom : 1px solid @header-border-color;
   // remains on top and overlaps content
@@ -16,6 +18,7 @@ header,
   }
   & > .header-content {
     height : inherit;
+    position : relative;
     padding : @padding;
     overflow : hidden;
     .simplesize();

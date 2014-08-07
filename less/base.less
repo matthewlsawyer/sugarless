@@ -13,7 +13,8 @@
 }
 
 html {
-  min-height : calc(100% - 1px);
+  min-height : 100%;
+  border : 1px solid transparent;
   position : relative;
 }
 
@@ -66,14 +67,23 @@ ol, ul {
   }
 }
 
-// vertical align an element
+/**
+ * Vertical aligning works by using table
+ * display mode. The drawback is that you
+ * are forced to deal with horizontal table
+ * spacing.
+ */
+.vertical-align-container {
+  display : table;
+  table-layout : auto;
+  white-space : nowrap; 
+  width : 100%;
+  height : 100%;
+}
+
 .vertical-align {
-  /* the parent must be position relative */
-  //position : absolute;
-  //top : 50%;
-  //transform : translateY(-50%);
-  //-ms-transform : translateY(-50%);
-  //-webkit-transform : translateY(-50%);
+  display : table-cell;
+  vertical-align : middle;
 }
 
 /**
@@ -90,6 +100,6 @@ ol, ul {
  * Components
  */
 .container {
-	padding : @padding;
+  padding : @padding;
   .simplesize();
 }
