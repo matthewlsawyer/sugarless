@@ -5,36 +5,49 @@
 table {
   width : 100%;
   margin-bottom : @margin;
-  & tr {
-    border : 1px solid @border-color;
-    & > td {
-      padding : @cell-padding;
-      vertical-align : middle;
+  border : 1px solid @border-color;
+  & > thead,
+  & > tbody,
+  & > tfoot {
+    & > tr {
+      & > td {
+        border : 1px solid @border-color;
+        padding : @cell-padding;
+        vertical-align : middle;
+      }
     }
   }
   // hoverable rows
   &.table-hover {
-    & tr {
-      .hover-row();
+    & > thead,
+    & > tbody,
+    & > tfoot {
+      & > tr {
+        .hover-row();
+      }
     }
   }
   // a dashboard of items
   &.table-dashboard {
     table-layout : fixed;
     white-space : nowrap;
-    & tr {
-      .hover-row();
-      // cells for thumbnails, content, and status
-      & > td {
-        &.cell-thumb {
-          width : @cell-thumb-width;
-        }
-        &.cell-content {
-          overflow : hidden;
-        }
-        &.cell-status {
-          width : @cell-status-width;
-          text-align : center;
+    & > thead,
+    & > tbody,
+    & > tfoot {
+      & > tr {
+        .hover-row();
+        // cells for thumbnails, content, and status
+        & > td {
+          &.cell-thumb {
+            width : @cell-thumb-width;
+          }
+          &.cell-content {
+            overflow : hidden;
+          }
+          &.cell-status {
+            width : @cell-status-width;
+            text-align : center;
+          }
         }
       }
     }

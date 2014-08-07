@@ -1497,21 +1497,19 @@ button:active {
  */
 .panel {
   border: 1px solid #dddddd;
-  background-color: #ffffff;
   border-radius: 5px;
   margin-bottom: 5px;
 }
 .panel > .panel-header {
   padding: 5px;
-  border-bottom: 1px solid #dddddd;
+  background-color: #f5f5f5;
 }
 .panel > .panel-body {
   padding: 5px;
-  background-color: #f5f5f5;
 }
 .panel > .panel-footer {
   padding: 5px;
-  border-top: 1px solid #dddddd;
+  background-color: #f5f5f5;
 }
 /**
  * Form styling
@@ -1538,39 +1536,54 @@ ul.list-inline > li {
 table {
   width: 100%;
   margin-bottom: 5px;
-}
-table tr {
   border: 1px solid #dddddd;
 }
-table tr > td {
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  border: 1px solid #dddddd;
   padding: 5px;
   vertical-align: middle;
 }
-table.table-hover tr {
+table.table-hover > thead > tr,
+table.table-hover > tbody > tr,
+table.table-hover > tfoot > tr {
   cursor: pointer;
   border-left: medium solid #dddddd;
 }
-table.table-hover tr:hover {
+table.table-hover > thead > tr:hover,
+table.table-hover > tbody > tr:hover,
+table.table-hover > tfoot > tr:hover {
   border-left: medium solid #919191;
 }
 table.table-dashboard {
   table-layout: fixed;
   white-space: nowrap;
 }
-table.table-dashboard tr {
+table.table-dashboard > thead > tr,
+table.table-dashboard > tbody > tr,
+table.table-dashboard > tfoot > tr {
   cursor: pointer;
   border-left: medium solid #dddddd;
 }
-table.table-dashboard tr:hover {
+table.table-dashboard > thead > tr:hover,
+table.table-dashboard > tbody > tr:hover,
+table.table-dashboard > tfoot > tr:hover {
   border-left: medium solid #919191;
 }
-table.table-dashboard tr > td.cell-thumb {
+table.table-dashboard > thead > tr > td.cell-thumb,
+table.table-dashboard > tbody > tr > td.cell-thumb,
+table.table-dashboard > tfoot > tr > td.cell-thumb {
   width: 60px;
 }
-table.table-dashboard tr > td.cell-content {
+table.table-dashboard > thead > tr > td.cell-content,
+table.table-dashboard > tbody > tr > td.cell-content,
+table.table-dashboard > tfoot > tr > td.cell-content {
   overflow: hidden;
 }
-table.table-dashboard tr > td.cell-status {
+table.table-dashboard > thead > tr > td.cell-status,
+table.table-dashboard > tbody > tr > td.cell-status,
+table.table-dashboard > tfoot > tr > td.cell-status {
   width: 60px;
   text-align: center;
 }
