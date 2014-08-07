@@ -5,22 +5,27 @@
 table {
   width : 100%;
   margin-bottom : @margin;
+  & tr {
+    border : 1px solid @border-color;
+    & > td {
+      padding : @cell-padding;
+      vertical-align : middle;
+    }
+  }
+  // hoverable rows
+  &.table-hover {
+    & tr {
+      .hover-row();
+    }
+  }
   // a dashboard of items
   &.table-dashboard {
     table-layout : fixed;
     white-space : nowrap;
-    // the row is hoverable and bordered
     & tr {
-      border : 1px solid @border-color;
-      border-left : medium solid @border-color;
-      cursor : pointer;
-      &:hover {
-        border-left : medium solid @table-hover-border-color;
-      }
+      .hover-row();
       // cells for thumbnails, content, and status
       & > td {
-        padding : @cell-padding;
-        vertical-align : middle !important;
         &.cell-thumb {
           width : @cell-thumb-width;
         }
@@ -34,6 +39,14 @@ table {
       }
     }
   }
+}
 
+// mixin for row hover
+.hover-row() {
+  cursor : pointer;
+  border-left : medium solid @border-color;
+  &:hover {
+    border-left : medium solid @table-hover-border-color;
+  }
 }
 

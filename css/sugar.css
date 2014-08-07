@@ -1493,21 +1493,30 @@ table {
   width: 100%;
   margin-bottom: 5px;
 }
+table tr {
+  border: 1px solid #dddddd;
+}
+table tr > td {
+  padding: 5px;
+  vertical-align: middle;
+}
+table.table-hover tr {
+  cursor: pointer;
+  border-left: medium solid #dddddd;
+}
+table.table-hover tr:hover {
+  border-left: medium solid #919191;
+}
 table.table-dashboard {
   table-layout: fixed;
   white-space: nowrap;
 }
 table.table-dashboard tr {
-  border: 1px solid #dddddd;
-  border-left: medium solid #dddddd;
   cursor: pointer;
+  border-left: medium solid #dddddd;
 }
 table.table-dashboard tr:hover {
   border-left: medium solid #919191;
-}
-table.table-dashboard tr > td {
-  padding: 5px;
-  vertical-align: middle !important;
 }
 table.table-dashboard tr > td.cell-thumb {
   width: 60px;
