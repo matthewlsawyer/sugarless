@@ -9,9 +9,10 @@ table {
   & > thead,
   & > tbody,
   & > tfoot {
-    & > tr {
+    & > tr { 
+      border : 1px solid @border-color;
       & > td {
-        border : 1px solid @border-color;
+        border-right : 1px solid @border-color;
         padding : @cell-padding;
         vertical-align : middle;
       }
@@ -30,23 +31,24 @@ table {
   // a dashboard of items
   &.table-dashboard {
     table-layout : fixed;
-    white-space : nowrap;
     & > thead,
     & > tbody,
     & > tfoot {
       & > tr {
         .hover-row();
-        // cells for thumbnails, content, and status
         & > td {
-          &.cell-thumb {
-            width : @cell-thumb-width;
+          &.cell-control {
+            text-align : center;
+            width : @dashboard-control-width;
           }
           &.cell-content {
+            text-align : left;
+            white-space : nowrap;
             overflow : hidden;
           }
           &.cell-status {
-            width : @cell-status-width;
-            text-align : center;
+            text-align : right;
+            width : @dashboard-status-width;
           }
         }
       }

@@ -447,6 +447,8 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /**
  * Helper classes
@@ -1517,7 +1519,7 @@ button:active {
  */
 input {
   display: inline-block;
-  height: 32.00000001px;
+  height: 32px;
   padding: 5px 10px;
   background-image: none;
   border: 1px solid #dddddd;
@@ -1539,10 +1541,15 @@ table {
   margin-bottom: 5px;
   border: 1px solid #dddddd;
 }
+table > thead > tr,
+table > tbody > tr,
+table > tfoot > tr {
+  border: 1px solid #dddddd;
+}
 table > thead > tr > td,
 table > tbody > tr > td,
 table > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
   padding: 5px;
   vertical-align: middle;
 }
@@ -1559,7 +1566,6 @@ table.table-hover > tfoot > tr:hover {
 }
 table.table-dashboard {
   table-layout: fixed;
-  white-space: nowrap;
 }
 table.table-dashboard > thead > tr,
 table.table-dashboard > tbody > tr,
@@ -1572,21 +1578,24 @@ table.table-dashboard > tbody > tr:hover,
 table.table-dashboard > tfoot > tr:hover {
   border-left: medium solid #919191;
 }
-table.table-dashboard > thead > tr > td.cell-thumb,
-table.table-dashboard > tbody > tr > td.cell-thumb,
-table.table-dashboard > tfoot > tr > td.cell-thumb {
+table.table-dashboard > thead > tr > td.cell-control,
+table.table-dashboard > tbody > tr > td.cell-control,
+table.table-dashboard > tfoot > tr > td.cell-control {
+  text-align: center;
   width: 60px;
 }
 table.table-dashboard > thead > tr > td.cell-content,
 table.table-dashboard > tbody > tr > td.cell-content,
 table.table-dashboard > tfoot > tr > td.cell-content {
+  text-align: left;
+  white-space: nowrap;
   overflow: hidden;
 }
 table.table-dashboard > thead > tr > td.cell-status,
 table.table-dashboard > tbody > tr > td.cell-status,
 table.table-dashboard > tfoot > tr > td.cell-status {
+  text-align: right;
   width: 60px;
-  text-align: center;
 }
 /*
  * Styling for footers.
