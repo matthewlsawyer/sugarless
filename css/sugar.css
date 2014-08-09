@@ -1541,59 +1541,43 @@ table {
   margin-bottom: 5px;
   border: 1px solid #dddddd;
 }
-table > thead > tr,
-table > tbody > tr,
-table > tfoot > tr {
+table th,
+table td {
   border: 1px solid #dddddd;
-}
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-  border-right: 1px solid #dddddd;
   padding: 5px;
   vertical-align: middle;
+  text-align: left;
 }
-table.table-hover > thead > tr,
-table.table-hover > tbody > tr,
-table.table-hover > tfoot > tr {
+table > thead > tr > th {
+  border-bottom: 2px solid #dddddd;
+}
+table.table-hover > tbody > tr {
   cursor: pointer;
   border-left: medium solid #dddddd;
 }
-table.table-hover > thead > tr:hover,
-table.table-hover > tbody > tr:hover,
-table.table-hover > tfoot > tr:hover {
+table.table-hover > tbody > tr:hover {
   border-left: medium solid #919191;
 }
 table.table-dashboard {
   table-layout: fixed;
 }
-table.table-dashboard > thead > tr,
-table.table-dashboard > tbody > tr,
-table.table-dashboard > tfoot > tr {
+table.table-dashboard > tbody > tr {
   cursor: pointer;
   border-left: medium solid #dddddd;
 }
-table.table-dashboard > thead > tr:hover,
-table.table-dashboard > tbody > tr:hover,
-table.table-dashboard > tfoot > tr:hover {
+table.table-dashboard > tbody > tr:hover {
   border-left: medium solid #919191;
 }
-table.table-dashboard > thead > tr > td.cell-control,
-table.table-dashboard > tbody > tr > td.cell-control,
-table.table-dashboard > tfoot > tr > td.cell-control {
-  text-align: center;
+table.table-dashboard > tbody > tr > td.cell-control {
+  text-align: left;
   width: 60px;
 }
-table.table-dashboard > thead > tr > td.cell-content,
-table.table-dashboard > tbody > tr > td.cell-content,
-table.table-dashboard > tfoot > tr > td.cell-content {
+table.table-dashboard > tbody > tr > td.cell-content {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
 }
-table.table-dashboard > thead > tr > td.cell-status,
-table.table-dashboard > tbody > tr > td.cell-status,
-table.table-dashboard > tfoot > tr > td.cell-status {
+table.table-dashboard > tbody > tr > td.cell-status {
   text-align: right;
   width: 60px;
 }

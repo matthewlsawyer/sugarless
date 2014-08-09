@@ -6,50 +6,40 @@ table {
   width : 100%;
   margin-bottom : @margin;
   border : 1px solid @border-color;
-  & > thead,
-  & > tbody,
-  & > tfoot {
-    & > tr { 
-      border : 1px solid @border-color;
-      & > td {
-        border-right : 1px solid @border-color;
-        padding : @cell-padding;
-        vertical-align : middle;
-      }
-    }
+  & th,
+  & td {
+    border : 1px solid @border-color;
+    padding : @cell-padding;
+    vertical-align : middle;
+    text-align : left;
+  }
+  & > thead > tr > th {
+    border-bottom : 2px solid @border-color;
   }
   // hoverable rows
   &.table-hover {
-    & > thead,
-    & > tbody,
-    & > tfoot {
-      & > tr {
-        .hover-row();
-      }
+    & > tbody > tr {
+      .hover-row();
     }
   }
   // a dashboard of items
   &.table-dashboard {
     table-layout : fixed;
-    & > thead,
-    & > tbody,
-    & > tfoot {
-      & > tr {
-        .hover-row();
-        & > td {
-          &.cell-control {
-            text-align : center;
-            width : @dashboard-control-width;
-          }
-          &.cell-content {
-            text-align : left;
-            white-space : nowrap;
-            overflow : hidden;
-          }
-          &.cell-status {
-            text-align : right;
-            width : @dashboard-status-width;
-          }
+    & > tbody > tr {
+      .hover-row();
+      & > td {
+        &.cell-control {
+          text-align : left;
+          width : @dashboard-control-width;
+        }
+        &.cell-content {
+          text-align : left;
+          white-space : nowrap;
+          overflow : hidden;
+        }
+        &.cell-status {
+          text-align : right;
+          width : @dashboard-status-width;
         }
       }
     }
