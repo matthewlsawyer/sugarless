@@ -1,0 +1,23 @@
+/**
+ * Parallax layout.
+ */
+
+.parallax {
+  height : @parallax-height;
+  background-attachment : fixed;
+  background-position : top center;
+  background-size : cover;
+  position : relative;
+  & > .parallax-caption {
+    width : 100%;
+    position : absolute;
+    bottom : 0;
+    padding : @parallax-caption-padding;
+    color : @parallax-caption-color;
+    background-color : @parallax-caption-background-color;
+    opacity : 0.75;
+    filter : alpha(opacity=75);
+  }
+}
+
+
