@@ -451,7 +451,7 @@ img {
   height: auto;
 }
 /**
- * Helper classes
+ * Utility classes.
  */
 .clearfix {
   *zoom: 1;
@@ -507,9 +507,6 @@ img {
   vertical-align: middle;
 }
 /**
- * Mixins
- */
-/**
  * Components
  */
 .container {
@@ -517,6 +514,16 @@ img {
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;
+}
+.caption {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
 }
 /**
  * Header styling
@@ -1588,16 +1595,6 @@ table.table-dashboard > tbody > tr > td.cell-status {
   background-position: top center;
   background-size: cover;
   position: relative;
-}
-.parallax > .parallax-caption {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  padding: 5px;
-  color: #ffffff;
-  background-color: #000000;
-  opacity: 0.75;
-  filter: alpha(opacity=75);
 }
 /*
  * Styling for footers.
