@@ -2,7 +2,12 @@
  * Form styling
  */
 
-input {
+.form-group {
+  margin : @form-group-margin 0;
+}
+
+input,
+select {
   display : inline-block;
   // size of button
   height : floor(@font-size * @line-height + @padding * 2 + 2);
@@ -12,3 +17,4 @@ input {
   border-radius : @border-radius;
   vertical-align : middle;
 }
+

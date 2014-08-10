@@ -1527,7 +1527,11 @@ button:active {
 /**
  * Form styling
  */
-input {
+.form-group {
+  margin: 5px 0;
+}
+input,
+select {
   display: inline-block;
   height: 32px;
   padding: 5px 10px;
