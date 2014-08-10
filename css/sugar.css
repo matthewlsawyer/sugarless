@@ -530,8 +530,8 @@ img {
  */
 header,
 .header {
-  height: 50px;
   width: 100%;
+  height: 50px;
   min-width: 800px;
   position: relative;
   border-bottom: 1px solid #dddddd;
@@ -547,10 +547,12 @@ header.header-fixed,
 }
 header > .header-content,
 .header > .header-content {
+  width: inherit;
   height: inherit;
   position: relative;
   padding: 5px;
   overflow: hidden;
+  display: table;
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;
@@ -1590,7 +1592,8 @@ table.table-dashboard > tbody > tr > td.cell-status {
  * Parallax layout.
  */
 .parallax {
-  height: 20vh;
+  height: auto;
+  max-width: 100%;
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
@@ -1601,8 +1604,8 @@ table.table-dashboard > tbody > tr > td.cell-status {
  */
 footer,
 .footer {
-  height: 50px;
   width: 100%;
+  height: 50px;
   min-width: 800px;
   border-top: 1px solid #dddddd;
   position: relative;
@@ -1614,11 +1617,12 @@ footer.footer-sticky,
 }
 footer > .footer-content,
 .footer > .footer-content {
-  height: inherit;
   width: inherit;
+  height: inherit;
   position: relative;
   padding: 5px;
   overflow: hidden;
+  display: table;
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;

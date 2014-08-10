@@ -3,8 +3,8 @@
  */
 footer,
 .footer {
-  height : @footer-height;
   width : 100%;
+  height : @footer-height;
   min-width : @page-min-width;
   border-top : 1px solid @footer-border-color;
   position : relative;
@@ -15,11 +15,12 @@ footer,
     bottom : 0;
   }
   & > .footer-content {
-    height : inherit;
     width : inherit;
+    height : inherit;
     position : relative;
     padding : @padding;
     overflow : hidden;
+    .table();
     .simplesize();
     .clearfix();
   }
