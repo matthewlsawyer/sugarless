@@ -2,19 +2,41 @@
  * Form styling
  */
 
-.form-group {
-  margin : @form-group-margin 0;
-}
-
 input,
-select {
-  display : inline-block;
-  // size of button
-  height : floor(@font-size * @line-height + @padding * 2 + 2);
-  padding : @padding @padding * 2;
-  background-image : none;
+select,
+textarea {
+  height : @input-height; 
+  padding : @input-padding;
+  margin-top : @input-margin;
+  margin-bottom : @input-margin;
   border: 1px solid @border-color;
   border-radius : @border-radius;
   vertical-align : middle;
+  background-image : none;
+}
+
+input {
+  width : @input-width;
+}
+
+textarea {
+  resize : none;
+  vertical-align : top;
+  width : @input-width * 2;
+}
+
+form {
+  & .form-group {
+    & input,
+    & select,
+    & button,
+    & textarea {
+      display : block;
+      width : 100%;
+    }
+    & textarea {
+      height : @input-height * 2 + @input-margin;
+    }
+  }
 }
 

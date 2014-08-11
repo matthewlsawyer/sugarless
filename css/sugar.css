@@ -1527,18 +1527,35 @@ button:active {
 /**
  * Form styling
  */
-.form-group {
-  margin: 5px 0;
-}
 input,
-select {
-  display: inline-block;
+select,
+textarea {
   height: 32px;
   padding: 5px 10px;
-  background-image: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border: 1px solid #dddddd;
   border-radius: 5px;
   vertical-align: middle;
+  background-image: none;
+}
+input {
+  width: 200px;
+}
+textarea {
+  resize: none;
+  vertical-align: top;
+  width: 400px;
+}
+form .form-group input,
+form .form-group select,
+form .form-group button,
+form .form-group textarea {
+  display: block;
+  width: 100%;
+}
+form .form-group textarea {
+  height: 69px;
 }
 /**
  * List styles
