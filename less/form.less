@@ -7,8 +7,7 @@ select,
 textarea {
   height : @input-height; 
   padding : @input-padding;
-  margin-top : @input-margin;
-  margin-bottom : @input-margin;
+  margin-bottom : @margin;
   border: 1px solid @border-color;
   border-radius : @border-radius;
   vertical-align : middle;
@@ -27,15 +26,16 @@ textarea {
 
 form {
   & .form-group {
-    & input,
-    & select,
-    & button,
-    & textarea {
+    & > label,
+    & > input,
+    & > select,
+    & > button,
+    & > textarea {
       display : block;
       width : 100%;
     }
-    & textarea {
-      height : @input-height * 2 + @input-margin;
+    & > textarea {
+      height : @input-height * 2 + @margin;
     }
   }
 }
