@@ -6,8 +6,9 @@ footer,
   width : 100%;
   height : @footer-height;
   min-width : @page-min-width;
-  border-top : 1px solid @footer-border-color;
   position : relative;
+  border-top : 1px solid @footer-border-color;
+  z-index : 100;
   // should stay on the bottom of the page
   // but should not overlap the context
   &.footer-sticky {

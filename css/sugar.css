@@ -1532,7 +1532,6 @@ select,
 textarea {
   height: 32px;
   padding: 5px 10px;
-  margin-bottom: 5px;
   border: 1px solid #dddddd;
   border-radius: 5px;
   vertical-align: middle;
@@ -1545,6 +1544,13 @@ textarea {
   resize: none;
   vertical-align: top;
   width: 400px;
+}
+label {
+  font-weight: bold;
+  max-width: 100%;
+}
+form .form-group {
+  margin-bottom: 5px;
 }
 form .form-group > label,
 form .form-group > input,
@@ -1628,8 +1634,9 @@ footer,
   width: 100%;
   height: 50px;
   min-width: 800px;
-  border-top: 1px solid #dddddd;
   position: relative;
+  border-top: 1px solid #dddddd;
+  z-index: 100;
 }
 footer.footer-sticky,
 .footer.footer-sticky {

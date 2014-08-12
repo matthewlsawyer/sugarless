@@ -7,7 +7,6 @@ select,
 textarea {
   height : @input-height; 
   padding : @input-padding;
-  margin-bottom : @margin;
   border: 1px solid @border-color;
   border-radius : @border-radius;
   vertical-align : middle;
@@ -24,8 +23,14 @@ textarea {
   width : @input-width * 2;
 }
 
+label {
+  font-weight : bold;
+  max-width : 100%;
+}
+
 form {
   & .form-group {
+    margin-bottom : @margin;
     & > label,
     & > input,
     & > select,
