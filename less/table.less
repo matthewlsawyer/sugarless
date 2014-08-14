@@ -45,6 +45,10 @@ table {
         &.dash-control {
           text-align : center;
           width : @dash-control-width;
+          &:first-child, 
+          &:last-child {
+            width : @dash-control-width + 1;
+          }
         }
         &.dash-content {
           text-align : left;

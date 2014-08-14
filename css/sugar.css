@@ -1612,6 +1612,10 @@ table.table-dashboard > tbody > tr > td.dash-control {
   text-align: center;
   width: 30px;
 }
+table.table-dashboard > tbody > tr > td.dash-control:first-child,
+table.table-dashboard > tbody > tr > td.dash-control:last-child {
+  width: 31px;
+}
 table.table-dashboard > tbody > tr > td.dash-content {
   text-align: left;
   white-space: nowrap;
