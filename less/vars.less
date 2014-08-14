@@ -13,6 +13,7 @@
 @padding : 5px;
 @font-size : 14px;
 @line-height : 1.428571429;
+@font-height : floor(@font-size * @line-height);
 @text-color : #333; 
 
 // Captions
@@ -41,8 +42,8 @@
 // Table
 @table-hover-border-color : darken(@border-color, 30%);
 @cell-padding : @padding;
-@dashboard-control-width : 60px;
-@dashboard-status-width : 60px;
+@dashboard-control-width : @font-height + @padding * 2;
+@dashboard-status-width : @font-height + @padding * 2;
 
 // Button
 @button-background-color : @fill-color;
@@ -51,4 +52,4 @@
 // Form
 @input-padding : @padding @padding * 2;
 @input-width : 200px;
-@input-height : floor(@font-size * @line-height + @padding * 2 + 2);
+@input-height : @font-height + @padding * 2 + 2;

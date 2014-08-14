@@ -552,7 +552,6 @@ header > .header-content,
   position: relative;
   padding: 5px;
   overflow: hidden;
-  display: table;
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;
@@ -1602,18 +1601,14 @@ table.table-dashboard > tbody > tr:hover {
   cursor: pointer;
   border-left: medium solid #919191;
 }
-table.table-dashboard > tbody > tr > td.cell-control {
+table.table-dashboard > tbody > tr > td.dash-control {
   text-align: center;
-  width: 60px;
+  width: 30px;
 }
-table.table-dashboard > tbody > tr > td.cell-content {
+table.table-dashboard > tbody > tr > td.dash-content {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
-}
-table.table-dashboard > tbody > tr > td.cell-status {
-  text-align: center;
-  width: 60px;
 }
 /**
  * Parallax layout.
@@ -1650,7 +1645,6 @@ footer > .footer-content,
   position: relative;
   padding: 5px;
   overflow: hidden;
-  display: table;
   max-width: 960px;
   min-width: 800px;
   margin: 0 auto;
