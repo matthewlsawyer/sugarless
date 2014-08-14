@@ -1621,17 +1621,6 @@ table.table-dashboard > tbody > tr > td.dash-content {
   white-space: nowrap;
   overflow: hidden;
 }
-/**
- * Parallax layout.
- */
-.parallax {
-  height: auto;
-  max-width: 100%;
-  background-attachment: fixed;
-  background-position: top center;
-  background-size: cover;
-  position: relative;
-}
 /*
  * Styling for footers.
  */
