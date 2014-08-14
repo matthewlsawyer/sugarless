@@ -5,10 +5,9 @@
 table {
   width : 100%;
   margin-bottom : @margin;
-  border : 1px solid @border-color;
   & th,
   & td {
-    border : 1px solid @border-color;
+    border-bottom : 1px solid @border-color;
     padding : @cell-padding;
     vertical-align : middle;
     text-align : left;
@@ -16,28 +15,36 @@ table {
   & > thead > tr > th {
     border-bottom : 2px solid @border-color;
   }
+  &.table-bordered {
+    border : 1px solid @border-color;
+    & th,
+    & td {
+      border-right : 1px solid @border-color;
+    }
+  }
   // hoverable rows
   &.table-hover {
     & > tbody > tr {
       &:hover {
         cursor : pointer;
-        background-color : #f5f5f5; 
+        background-color : @table-hover-color; 
       }
     }
   }
   // a dashboard of items
   &.table-dashboard {
+    border : 1px solid @border-color;
     table-layout : fixed;
     & > tbody > tr {
       border-left : medium solid @border-color;
       &:hover {
         cursor : pointer;
-        border-left : medium solid @table-hover-border-color;
+        border-left : medium solid @dash-hover-color;
       }
       & > td {
         &.dash-control {
           text-align : center;
-          width : @dashboard-control-width;
+          width : @dash-control-width;
         }
         &.dash-content {
           text-align : left;
