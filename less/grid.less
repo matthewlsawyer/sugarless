@@ -23,9 +23,9 @@
 // mixin for generating rows
 .row(@columns : 1) when (@columns <= @max-row-columns) {
   &.row-@{columns} {
-    & > .column {
+    & > .col {
       // generate the columns
-      .column(@columns);
+      .col(@columns);
     }
   }
   // recurse
@@ -36,7 +36,7 @@
  * Columns in a row. Relative size is calculated
  * based on the number of columns in the row.
  */
-.grid > .row > .column {
+.grid > .row > .col {
   float : left;
   overflow-x : hidden;
   margin-left : @column-margin;
@@ -44,19 +44,19 @@
 }
 
 // mixin for generating columns
-.column(@columns, @width : 1) when (@width <= @columns) {
-  &.column-@{width} {
-    .column-fn(@columns, @width);
+.col(@columns, @width : 1) when (@width <= @columns) {
+  &.col-@{width} {
+    .col-fn(@columns, @width);
   }
-  &.column-offset-@{width} {
-    .column-offset-fn(@columns, @width);
+  &.col-offset-@{width} {
+    .col-offset-fn(@columns, @width);
   }
   // recurse
-  .column(@columns, @width : (@width + 1));
+  .col(@columns, @width : (@width + 1));
 }
 
 // mixin for sizing
-.column-fn(@columns, @width) when (@width <= @columns) {
+.col-fn(@columns, @width) when (@width <= @columns) {
   @percent : percentage(@width / @columns);
   @offset : @column-margin * 2;
   // percentage size minus margin
@@ -67,7 +67,7 @@
 }
 
 // mixin for offset
-.column-offset-fn(@columns, @width) when (@width < @columns) {
+.col-offset-fn(@columns, @width) when (@width < @columns) {
   @percent : percentage(@width / @columns);
   // percentage size of the offset column plus normal left margin
   margin-left : calc(~'@{percent} + @{column-margin}');
