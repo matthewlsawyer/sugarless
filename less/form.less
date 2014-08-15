@@ -26,6 +26,23 @@ textarea {
 label {
   font-weight : bold;
   max-width : 100%;
+  margin-bottom : @margin;
+}
+
+fieldset {
+  margin : 0;
+  margin-bottom : @margin;
+  border : 0;
+  min-width : 0;
+  padding : @padding;
+  border : 1px solid @border-color;
+  border-radius : @border-radius;
+  background-color : @fill-color;
+  & > legend {
+    display : block;
+    font-weight : bold;
+    margin-bottom : @margin;
+  }
 }
 
 form {
