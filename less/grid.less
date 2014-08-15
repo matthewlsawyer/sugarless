@@ -44,7 +44,9 @@
   .col(@columns, @width : (@width + 1));
 }
 
-// mixin for offset
+// Column offsets. Adds a left margin to the
+// columns which is calculated relative to the
+// row size.
 .col-offset(@columns, @width) when (@width < @columns) {
   @percent : percentage(@width / @columns);
   & > .col-offset-@{width} {
