@@ -1976,6 +1976,7 @@ textarea {
   border-radius: 5px;
   vertical-align: middle;
   background-image: none;
+  background-color: #ffffff;
 }
 input {
   width: 200px;
@@ -2004,6 +2005,9 @@ fieldset > legend {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+}
+fieldset > .form-group:last-child {
+  margin-bottom: 0;
 }
 form .form-group {
   margin-bottom: 5px;

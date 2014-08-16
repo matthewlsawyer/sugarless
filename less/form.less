@@ -11,6 +11,7 @@ textarea {
   border-radius : @border-radius;
   vertical-align : middle;
   background-image : none;
+  background-color : @input-background-color;
 }
 
 input {
@@ -42,6 +43,9 @@ fieldset {
     display : block;
     font-weight : bold;
     margin-bottom : @margin;
+  }
+  & > .form-group:last-child {
+    margin-bottom : 0;
   }
 }
 
