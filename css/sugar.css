@@ -491,6 +491,9 @@ img {
 .text-right {
   text-align: right;
 }
+.pointer {
+  cursor: pointer;
+}
 /**
  * Vertical aligning works by using table
  * display mode. The drawback is that you
@@ -1982,6 +1985,9 @@ textarea {
 }
 input {
   width: 200px;
+}
+select {
+  cursor: pointer;
 }
 textarea {
   resize: none;
