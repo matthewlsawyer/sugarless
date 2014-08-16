@@ -1,0 +1,29 @@
+/**
+ * Nav styles
+ */
+
+nav,
+.nav {
+  &.nav-tabs {
+    border-bottom : 1px solid @border-color;
+    & > ul > li {
+      padding : @padding;
+      background-color : @background-color;
+      border : 0;
+      border-top-left-radius : @border-radius;
+      border-top-right-radius : @border-radius;
+      -webkit-border-top-left-radius : @border-radius;
+      -webkit-border-top-right-radius : @border-radius;
+      -moz-border-radius-topleft : @border-radius;
+      -moz-border-radius-topright : @border-radius;
+      .inline-block();
+      &.selected {
+        border : 1px solid @border-color;
+        border-bottom : 0;
+      }
+      &:hover {
+        cursor : pointer;
+      }
+    }
+  }
+}
