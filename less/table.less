@@ -7,12 +7,12 @@ table {
   margin-bottom : @margin;
   & th,
   & td {
-    border-bottom : 1px solid @border-color;
     padding : @cell-padding;
     vertical-align : middle;
     text-align : left;
+    border-bottom : 1px solid @border-color;
   }
-  & > thead > tr > th {
+  & th {
     border-bottom : 2px solid @border-color;
   }
   &.table-bordered {
@@ -20,6 +20,12 @@ table {
     & th,
     & td {
       border-right : 1px solid @border-color;
+      &:last-child {
+        border-right : 0;
+      }
+    }
+    & tr:last-child > td {
+      border-bottom : 0;
     }
   }
   // hoverable rows
@@ -35,7 +41,7 @@ table {
   &.table-dashboard {
     border : 1px solid @border-color;
     table-layout : fixed;
-    & > tbody > tr {
+    & tr {
       border-left : medium solid @border-color;
       &:hover {
         cursor : pointer;
