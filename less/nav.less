@@ -7,19 +7,34 @@ nav,
   &.nav-tabs {
     border-bottom : 1px solid @border-color;
     & > ul > li {
-      padding : @padding;
-      background-color : @nav-background-color;
-      border : 0;
-      border-top-left-radius : @border-radius;
-      border-top-right-radius : @border-radius;
-      -webkit-border-top-left-radius : @border-radius;
-      -webkit-border-top-right-radius : @border-radius;
-      -moz-border-radius-topleft : @border-radius;
-      -moz-border-radius-topright : @border-radius;
       .inline-block();
+      padding : @padding;
+      background-color : @nav-tab-background-color;
       &.selected {
         border : 1px solid @border-color;
         border-bottom : 0;
+        border-top-left-radius : @border-radius;
+        border-top-right-radius : @border-radius;
+        -moz-border-radius-topleft : @border-radius;
+        -moz-border-radius-topright : @border-radius;
+        -webkit-border-top-left-radius : @border-radius;
+        -webkit-border-top-right-radius : @border-radius;
+      }
+      &:hover {
+        cursor : pointer;
+      }
+    }
+  }
+  &.nav-pills {
+    & > ul > li {
+      .inline-block();
+      padding : @padding;
+      &.selected {
+        border-radius : @border-radius;
+        -moz-border-radius : @border-radius;
+        -webkit-border-radius : @border-radius;
+        border : 1px solid @nav-pill-border-color; 
+        background-color : @nav-pill-background-color;
       }
       &:hover {
         cursor : pointer;
