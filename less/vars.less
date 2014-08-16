@@ -5,7 +5,7 @@
 // Defaults
 @page-width : 960px;
 @page-min-width : 800px;
-@background-color : #fff;
+@white : #fff;
 @fill-color : #f5f5f5;
 @border-color : #ddd;
 @border-radius : 5px;
@@ -23,11 +23,12 @@
 
 // Header
 @header-height : 50px;
-@header-background-color : @background-color;
+@header-background-color : @fill-color;
 @header-border-color : @border-color;
 
 // Footer
 @footer-height : 50px;
+@footer-background-color : @fill-color;
 @footer-border-color : @border-color;
 
 // Grid
@@ -46,11 +47,14 @@
 @dash-hover-color : darken(@border-color, 30%);
 
 // Button
-@button-background-color : @fill-color;
-@button-border-color : @border-color;
+@button-background-color : darken(@fill-color, 5%);
+@button-border-color : darken(@border-color, 5%);
 
 // Form
 @input-padding : @padding @padding * 2;
 @input-width : 200px;
 @input-height : @font-height + @padding * 2 + 2;
-@input-background-color : @background-color;
+@input-background-color : @white;
+
+// Nav
+@nav-background-color : @white;
