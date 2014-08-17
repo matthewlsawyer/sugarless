@@ -70,3 +70,41 @@ form {
   }
 }
 
+.radio {
+  .input-type("radio"); 
+}
+
+.checkbox {
+  .input-type("checkbox"); 
+}
+
+.input-type(@type) {
+  @size : @font-height - 4px; 
+  position : relative;
+  height : @font-height;
+  margin-bottom : @margin;
+  &:last-child {
+    margin-bottom : 0;
+  }
+  & input[type="@{type}"] {
+    height : @size;
+    width : @size;
+    margin-top : 2px;
+    display : inline-block;
+    position : absolute;
+    left : 0;
+  }
+  // always push the label right
+  // even if the label is first
+  & label {
+    display : inline-block;
+    font-weight : normal;
+    margin : 0;
+    position : absolute;
+    left : @size + @margin;
+    // if the label wraps the input then move it left
+    & > input[type="@{type}"] {
+      margin-left : -(@size + @margin);
+    }
+  }
+}

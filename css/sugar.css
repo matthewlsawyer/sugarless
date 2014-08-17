@@ -2031,6 +2031,58 @@ form .form-group > textarea {
 form .form-group > textarea {
   height: 69px;
 }
+.radio {
+  position: relative;
+  height: 20px;
+  margin-bottom: 5px;
+}
+.radio:last-child {
+  margin-bottom: 0;
+}
+.radio input[type="radio"] {
+  height: 16px;
+  width: 16px;
+  margin-top: 2px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+.radio label {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  left: 21px;
+}
+.radio label > input[type="radio"] {
+  margin-left: -21px;
+}
+.checkbox {
+  position: relative;
+  height: 20px;
+  margin-bottom: 5px;
+}
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+.checkbox input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+  margin-top: 2px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+.checkbox label {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  left: 21px;
+}
+.checkbox label > input[type="checkbox"] {
+  margin-left: -21px;
+}
 /**
  * List styles
  */
