@@ -23,9 +23,9 @@ select {
 }
 
 textarea {
+  width : @input-width;
   resize : none;
   vertical-align : top;
-  width : @input-width * 2;
 }
 
 label {
@@ -43,31 +43,70 @@ fieldset {
   border : 1px solid @border-color;
   border-radius : @border-radius;
   background-color : @fill-color;
-  & > legend {
+  legend {
     display : block;
     font-weight : bold;
     margin-bottom : @margin;
   }
-  & > .form-group:last-child {
+  > .form-group:last-child {
     margin-bottom : 0;
   }
 }
 
 form {
-  & .form-group {
+  .form-group {
     margin-bottom : @margin;
-    & > label,
-    & > input,
-    & > select,
-    & > button,
-    & > textarea {
+    label,
+    input,
+    select,
+    button,
+    textarea {
       display : block;
       width : 100%;
     }
-    & > textarea {
+    textarea {
       height : @input-height * 2 + @margin;
     }
   }
+}
+
+.input-group {
+  @control-width : @font-height + @padding * 2;
+  > input,
+  .form-group & > input {
+    border-top-right-radius : 0;
+    border-bottom-right-radius : 0;
+    width : calc(~'101% - @{control-width}'); 
+    width : -o-calc(~'100% - @{control-width}');
+    width : -moz-calc(~'100% - @{control-width}');
+    width : -webkit-calc(~'100% - @{control-width}');
+    float : left;
+    & + .input-control {
+      border-top-left-radius : 0;
+      border-bottom-left-radius : 0;
+      border-top-right-radius : @border-radius;
+      border-bottom-right-radius : @border-radius;
+      border-left : 0;
+    }
+  }
+  > .input-control {
+    width : @control-width;
+    text-align : center;
+    padding : @padding;
+    float : left;
+    border-top-left-radius : @border-radius;
+    border-bottom-left-radius : @border-radius;
+    border : 1px solid @border-color;
+    background-color : @input-background-color;
+    // if the control comes first
+    & + input { 
+      border-radius : @border-radius;
+      border-top-left-radius : 0;
+      border-bottom-left-radius : 0;
+      border-left : 0;
+    }
+  }
+  .clearfix();
 }
 
 .radio {
@@ -86,7 +125,7 @@ form {
   &:last-child {
     margin-bottom : 0;
   }
-  & input[type="@{type}"] {
+  input[type="@{type}"] {
     height : @size;
     width : @size;
     margin-top : 2px;
@@ -96,7 +135,7 @@ form {
   }
   // always push the label right
   // even if the label is first
-  & label {
+  label {
     display : inline-block;
     font-weight : normal;
     margin : 0;
