@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 			development : {
 				options: {},
 				files : {
-					"css/sugar.css" : "less/sugar.less"
+					"dist/css/sugar.css" : "src/less/sugar.less"
 				}
 			},
 			production : {
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					cleancss : true
 				},
 				files : {
-					"dist/sugar.min.css" : "less/sugar.less"
+					"dist/css/sugar.min.css" : "src/less/sugar.less"
 				}
 			}
 		}

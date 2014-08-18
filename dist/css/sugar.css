@@ -2190,6 +2190,9 @@ table.table-dashboard tr > td.dash-content {
   white-space: nowrap;
   overflow: hidden;
 }
+table.table-dashboard tr:last-child > td {
+  border-bottom: 0;
+}
 /**
  * Nav styles
  */
