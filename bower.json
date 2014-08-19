@@ -1,11 +1,11 @@
 {
   "name": "sugarless",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "homepage": "https://github.com/matthewlsawyer/sugarless",
   "authors": [
     "Matthew L. Sawyer <matthewlsawyer@gmail.com>"
   ],
-  "description": "HTML5 sugar in LESS",
+  "description": "html5 sugar in less",
   "main": "dist/css/sugar.css",
   "keywords": [
     "sugar",

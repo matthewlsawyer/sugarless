@@ -1,6 +1,7 @@
 {
   "name": "sugarless",
   "version": "0.0.0",
+  "private": true,
   "description": "html5 sugar in less",
   "repository": {
     "type": "git",
