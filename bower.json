@@ -15,8 +15,10 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "package.json",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "Gruntfile.js"
   ],
   "devDependencies": {
     "normalize.css": "latest",
