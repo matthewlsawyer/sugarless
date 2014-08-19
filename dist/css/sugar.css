@@ -3643,9 +3643,6 @@ form .form-group textarea {
   height: 20px;
   margin-bottom: 5px;
 }
-.radio:last-child {
-  margin-bottom: 0;
-}
 .radio input[type="radio"] {
   height: 16px;
   width: 16px;
@@ -3668,9 +3665,6 @@ form .form-group textarea {
   position: relative;
   height: 20px;
   margin-bottom: 5px;
-}
-.checkbox:last-child {
-  margin-bottom: 0;
 }
 .checkbox input[type="checkbox"] {
   height: 16px;
