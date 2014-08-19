@@ -34,16 +34,12 @@ ul.nav {
 .nav-tab() {
   .inline-block();
   padding : @padding;
-  background-color : @nav-tab-background-color;
+  border-top-left-radius : @border-radius;
+  border-top-right-radius : @border-radius;
   &.selected {
-    border : 1px solid @border-color;
+    border : 1px solid @nav-tab-border-color;
     border-bottom : 0;
-    border-top-left-radius : @border-radius;
-    border-top-right-radius : @border-radius;
-    -moz-border-radius-topleft : @border-radius;
-    -moz-border-radius-topright : @border-radius;
-    -webkit-border-top-left-radius : @border-radius;
-    -webkit-border-top-right-radius : @border-radius;
+    background-color : @nav-tab-background-color;
   }
   &:hover {
     cursor : pointer;
@@ -53,10 +49,8 @@ ul.nav {
 .nav-pill() {
   .inline-block();
   padding : @padding;
+  border-radius : @border-radius;
   &.selected {
-    border-radius : @border-radius;
-    -moz-border-radius : @border-radius;
-    -webkit-border-radius : @border-radius;
     border : 1px solid @nav-pill-border-color; 
     background-color : @nav-pill-background-color;
   }
