@@ -16,8 +16,16 @@ module.exports = function(grunt) {
 					"dist/css/sugar.min.css" : "src/less/sugar.less"
 				}
 			}
-		}
+		},
+    copy : {
+      main : {
+        files : [
+          { expand : true, cwd : "bower_components/font-awesome/fonts/", src : ["*"], dest : "dist/fonts/", filter : "isFile" }
+        ]
+      }
+    }
 	});
 	grunt.loadNpmTasks("grunt-contrib-less");
-	grunt.registerTask("default", "less");
+  grunt.loadNpmTasks("grunt-contrib-copy");
+	grunt.registerTask("default", [ "less", "copy" ]);
 };
