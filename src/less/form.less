@@ -125,7 +125,18 @@ form {
   @size : @font-height - 4px; 
   position : relative;
   height : @font-height;
+  // bottom margin so they stack
   margin-bottom : @margin;
+  .form-group > & {
+    // but the last in a form group shouldnt have margin
+    &:last-child {
+      margin-bottom : 0;
+    }
+    // fix label overflow
+    label {
+      width : inherit;
+    }
+  }
   input[type="@{type}"] {
     height : @size;
     width : @size;

@@ -11,7 +11,7 @@
 // Horizontal rows in a grid. Allows for
 // column count to be defined, up to @max-row-columns.
 .row(@columns : 1) when (@columns <= @max-row-columns) {
-  & > .row-@{columns} {
+  .row-@{columns} {
     // generate columns
     .col(@columns, @width : 1);
     // generate offsets
@@ -29,7 +29,7 @@
 .col(@columns, @width) when (@width <= @columns) {
   @percent : percentage(@width / @columns);
   @offset : @column-margin * 2;
-  & > .col-@{width} {
+  .col-@{width} {
     // percentage size minus margin
     width : calc(~'@{percent} - @{offset}');
     width : -o-calc(~'@{percent} - @{offset}');
@@ -49,7 +49,7 @@
 // row size.
 .col-offset(@columns, @width) when (@width < @columns) {
   @percent : percentage(@width / @columns);
-  & > .col-offset-@{width} {
+  .col-offset-@{width} {
     // percentage size of the offset column plus normal left margin
     margin-left : calc(~'@{percent} + @{column-margin}');
     margin-left : -o-calc(~'@{percent} + @{column-margin}');
