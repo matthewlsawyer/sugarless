@@ -5,26 +5,25 @@
 table {
   width : 100%;
   margin-bottom : @margin;
-  & th,
-  & td {
+  th, td {
     padding : @cell-padding;
     vertical-align : middle;
     text-align : left;
     border-bottom : 1px solid @border-color;
   }
-  & th {
+  th {
     border-bottom : 2px solid @border-color;
   }
   &.table-bordered {
     border : 1px solid @border-color;
-    & th,
-    & td {
+    th,
+    td {
       border-right : 1px solid @border-color;
       &:last-child {
         border-right : 0;
       }
     }
-    & tr:last-child > td {
+    tr:last-child > td {
       border-bottom : 0;
     }
   }
@@ -41,12 +40,7 @@ table {
   &.table-dashboard {
     border : 1px solid @border-color;
     table-layout : fixed;
-    & tr {
-      border-left : medium solid @border-color;
-      &:hover {
-        cursor : pointer;
-        border-left : medium solid @dash-hover-color;
-      }
+    & > tbody > tr {
       & > td {
         &.dash-control {
           text-align : center;
@@ -55,11 +49,22 @@ table {
           &:last-child {
             width : @dash-control-width + 1;
           }
+          // anchor will be light until hovered
+          &.dash-anchor {
+            color : lighten(@text-color, 50%);
+          }
         }
         &.dash-content {
           text-align : left;
           white-space : nowrap;
           overflow : hidden;
+        }
+      }
+      // hovering the row should make the anchor darker
+      &:hover {
+        cursor : pointer;
+        & > td.dash-anchor {
+          color : @text-color;
         }
       }
       &:last-child > td {

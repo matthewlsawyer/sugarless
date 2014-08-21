@@ -3754,27 +3754,29 @@ table.table-dashboard {
   border: 1px solid #dddddd;
   table-layout: fixed;
 }
-table.table-dashboard tr {
-  border-left: medium solid #dddddd;
-}
-table.table-dashboard tr:hover {
-  cursor: pointer;
-  border-left: medium solid #919191;
-}
-table.table-dashboard tr > td.dash-control {
+table.table-dashboard > tbody > tr > td.dash-control {
   text-align: center;
   width: 30px;
 }
-table.table-dashboard tr > td.dash-control:first-child,
-table.table-dashboard tr > td.dash-control:last-child {
+table.table-dashboard > tbody > tr > td.dash-control:first-child,
+table.table-dashboard > tbody > tr > td.dash-control:last-child {
   width: 31px;
 }
-table.table-dashboard tr > td.dash-content {
+table.table-dashboard > tbody > tr > td.dash-control.dash-anchor {
+  color: #b3b3b3;
+}
+table.table-dashboard > tbody > tr > td.dash-content {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
 }
-table.table-dashboard tr:last-child > td {
+table.table-dashboard > tbody > tr:hover {
+  cursor: pointer;
+}
+table.table-dashboard > tbody > tr:hover > td.dash-anchor {
+  color: #333333;
+}
+table.table-dashboard > tbody > tr:last-child > td {
   border-bottom: 0;
 }
 /**
