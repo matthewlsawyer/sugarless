@@ -2061,19 +2061,27 @@ img {
   cursor: pointer;
 }
 /**
- * Vertical aligning works by using table
+ * Vertical centering works by using table
  * display mode. The drawback is that you
  * are forced to deal with horizontal table
  * spacing.
  */
-.vertical-align-container {
+.vertical-middle-container {
   display: table;
   width: 100%;
   height: 100%;
 }
-.vertical-align {
+.vertical-middle-container > .vertical-middle {
   display: table-cell;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-middle {
   vertical-align: middle;
+}
+.vertical-bottom {
+  vertical-align: bottom;
 }
 /**
  * Components
