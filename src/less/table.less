@@ -47,14 +47,10 @@ table {
   }
   // hoverable rows
   &.table-hover {
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        &:hover {
-          cursor : pointer;
-          background-color : @table-hover-color; 
-        }
+    > tbody > tr {
+      &:hover {
+        cursor : pointer;
+        background-color : @table-hover-color; 
       }
     }
   }
@@ -62,10 +58,11 @@ table {
   &.table-dashboard {
     border : 1px solid @border-color;
     table-layout : fixed;
-    > thead,
-    > tbody,
-    > tfoot {
+    > tbody {
       > tr {
+        &:hover {
+          cursor : pointer;
+        }
         > td {
           &.dash-control {
             text-align : center;
@@ -82,16 +79,11 @@ table {
             overflow : hidden;
           }
         }
-        &:hover {
-          cursor : pointer;
-        }
       }
       > tr:not(:hover) {
-        > td {
-          &.dash-anchor {
-            // anchor will be light until hovered
-            color : @dash-anchor-color;
-          }
+        > td.dash-anchor {
+          // anchor will be light until hovered
+          color : @dash-anchor-color;
         }
       }
     }

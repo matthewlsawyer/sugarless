@@ -3752,9 +3752,7 @@ table.table-bordered > tbody > tr > td,
 table.table-bordered > tfoot > tr > td {
   border: 1px solid #dddddd;
 }
-table.table-hover > thead > tr:hover,
-table.table-hover > tbody > tr:hover,
-table.table-hover > tfoot > tr:hover {
+table.table-hover > tbody > tr:hover {
   cursor: pointer;
   background-color: #f5f5f5;
 }
@@ -3762,35 +3760,23 @@ table.table-dashboard {
   border: 1px solid #dddddd;
   table-layout: fixed;
 }
-table.table-dashboard > thead > tr > td.dash-control,
-table.table-dashboard > tbody > tr > td.dash-control,
-table.table-dashboard > tfoot > tr > td.dash-control {
+table.table-dashboard > tbody > tr:hover {
+  cursor: pointer;
+}
+table.table-dashboard > tbody > tr > td.dash-control {
   text-align: center;
   width: 30px;
 }
-table.table-dashboard > thead > tr > td.dash-control:first-child,
 table.table-dashboard > tbody > tr > td.dash-control:first-child,
-table.table-dashboard > tfoot > tr > td.dash-control:first-child,
-table.table-dashboard > thead > tr > td.dash-control:last-child,
-table.table-dashboard > tbody > tr > td.dash-control:last-child,
-table.table-dashboard > tfoot > tr > td.dash-control:last-child {
+table.table-dashboard > tbody > tr > td.dash-control:last-child {
   width: 31px;
 }
-table.table-dashboard > thead > tr > td.dash-content,
-table.table-dashboard > tbody > tr > td.dash-content,
-table.table-dashboard > tfoot > tr > td.dash-content {
+table.table-dashboard > tbody > tr > td.dash-content {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
 }
-table.table-dashboard > thead > tr:hover,
-table.table-dashboard > tbody > tr:hover,
-table.table-dashboard > tfoot > tr:hover {
-  cursor: pointer;
-}
-table.table-dashboard > thead > tr:not(:hover) > td.dash-anchor,
-table.table-dashboard > tbody > tr:not(:hover) > td.dash-anchor,
-table.table-dashboard > tfoot > tr:not(:hover) > td.dash-anchor {
+table.table-dashboard > tbody > tr:not(:hover) > td.dash-anchor {
   color: #b3b3b3;
 }
 /**
