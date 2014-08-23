@@ -5,7 +5,8 @@
 table {
   width : 100%;
   margin-bottom : @margin;
-  th, td {
+  th, 
+  td {
     padding : @cell-padding;
     vertical-align : middle;
     text-align : left;
@@ -14,17 +15,17 @@ table {
   th {
     border-bottom : 2px solid @border-color;
   }
+  // nested table
+  table {
+    margin : -@cell-padding;
+    width : calc(~'100% + @{cell-padding} * 2'); 
+  }
+  // bordered table
   &.table-bordered {
     border : 1px solid @border-color;
     th,
     td {
       border-right : 1px solid @border-color;
-      &:last-child {
-        border-right : 0;
-      }
-    }
-    tr:last-child > td {
-      border-bottom : 0;
     }
   }
   // hoverable rows
@@ -66,9 +67,6 @@ table {
         & > td.dash-anchor {
           color : @text-color;
         }
-      }
-      &:last-child > td {
-        border-bottom : 0;
       }
     }
   }

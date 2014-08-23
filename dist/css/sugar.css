@@ -3732,19 +3732,16 @@ table td {
 table th {
   border-bottom: 2px solid #dddddd;
 }
+table table {
+  margin: -5px;
+  width: calc(100% + 5px * 2);
+}
 table.table-bordered {
   border: 1px solid #dddddd;
 }
 table.table-bordered th,
 table.table-bordered td {
   border-right: 1px solid #dddddd;
-}
-table.table-bordered th:last-child,
-table.table-bordered td:last-child {
-  border-right: 0;
-}
-table.table-bordered tr:last-child > td {
-  border-bottom: 0;
 }
 table.table-hover > tbody > tr:hover {
   cursor: pointer;
@@ -3775,9 +3772,6 @@ table.table-dashboard > tbody > tr:hover {
 }
 table.table-dashboard > tbody > tr:hover > td.dash-anchor {
   color: #333333;
-}
-table.table-dashboard > tbody > tr:last-child > td {
-  border-bottom: 0;
 }
 /**
  * Nav styles
