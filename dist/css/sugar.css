@@ -3790,6 +3790,7 @@ nav.nav-tabs > ul > li,
 .nav.nav-tabs > ul > li {
   display: inline-block;
   padding: 5px;
+  border: 1px solid transparent;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -3807,6 +3808,7 @@ nav.nav-pills > ul > li,
 .nav.nav-pills > ul > li {
   display: inline-block;
   padding: 5px;
+  border: 1px solid transparent;
   border-radius: 5px;
 }
 nav.nav-pills > ul > li.selected,
@@ -3824,6 +3826,7 @@ ul.nav.nav-tabs {
 ul.nav.nav-tabs > li {
   display: inline-block;
   padding: 5px;
+  border: 1px solid transparent;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -3838,6 +3841,7 @@ ul.nav.nav-tabs > li:hover {
 ul.nav.nav-pills > li {
   display: inline-block;
   padding: 5px;
+  border: 1px solid transparent;
   border-radius: 5px;
 }
 ul.nav.nav-pills > li.selected {
