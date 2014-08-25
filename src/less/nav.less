@@ -6,8 +6,11 @@ nav,
 .nav {
   &.nav-tabs {
     border-bottom : 1px solid @border-color;
-    & > ul > li {
-      .nav-tab();
+    > ul {
+      margin-bottom : -1px;
+      > li {
+        .nav-tab();
+      }
     }
   }
   &.nav-pills {
@@ -20,6 +23,7 @@ nav,
 ul.nav {
   &.nav-tabs {
     border-bottom : 1px solid @border-color;
+    margin-bottom : -1px;
     & > li {
       .nav-tab();
     }
@@ -39,7 +43,7 @@ ul.nav {
   border-top-right-radius : @border-radius;
   &.selected {
     border : 1px solid @nav-tab-border-color;
-    border-bottom : 0;
+    border-bottom : 1px solid transparent;
     background-color : @nav-tab-background-color;
   }
   &:hover {

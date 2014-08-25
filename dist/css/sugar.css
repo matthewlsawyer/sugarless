@@ -3786,6 +3786,10 @@ nav.nav-tabs,
 .nav.nav-tabs {
   border-bottom: 1px solid #dddddd;
 }
+nav.nav-tabs > ul,
+.nav.nav-tabs > ul {
+  margin-bottom: -1px;
+}
 nav.nav-tabs > ul > li,
 .nav.nav-tabs > ul > li {
   display: inline-block;
@@ -3797,7 +3801,7 @@ nav.nav-tabs > ul > li,
 nav.nav-tabs > ul > li.selected,
 .nav.nav-tabs > ul > li.selected {
   border: 1px solid #dddddd;
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
   background-color: #ffffff;
 }
 nav.nav-tabs > ul > li:hover,
@@ -3822,6 +3826,7 @@ nav.nav-pills > ul > li:hover,
 }
 ul.nav.nav-tabs {
   border-bottom: 1px solid #dddddd;
+  margin-bottom: -1px;
 }
 ul.nav.nav-tabs > li {
   display: inline-block;
@@ -3832,7 +3837,7 @@ ul.nav.nav-tabs > li {
 }
 ul.nav.nav-tabs > li.selected {
   border: 1px solid #dddddd;
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
   background-color: #ffffff;
 }
 ul.nav.nav-tabs > li:hover {
