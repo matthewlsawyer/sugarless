@@ -1,0 +1,30 @@
+.toast {
+  display : inline-block;
+  position : absolute;
+  z-index : 200;
+  margin : @toast-margin;
+  padding : @padding;
+  background-color : @toast-background-color;
+  border : 1px solid transparent;
+  border-radius : @border-radius;
+
+  &.toast-top,
+  &.toast-top-left {
+    top : 0;
+    left : 0;
+  }
+  &.toast-top-right {
+    top : 0;
+    right : 0;
+  }
+
+  &.toast-bottom,
+  &.toast-bottom-left {
+    bottom : 0;
+    left : 0;
+  }
+  &.toast-bottom-right {
+    bottom : 0;
+    right : 0;
+  }
+}

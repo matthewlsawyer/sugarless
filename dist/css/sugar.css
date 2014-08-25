@@ -3856,6 +3856,34 @@ ul.nav.nav-pills > li.selected {
 ul.nav.nav-pills > li:hover {
   cursor: pointer;
 }
+.toast {
+  display: inline-block;
+  position: absolute;
+  z-index: 200;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(232, 232, 232, 0.8);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.toast.toast-top,
+.toast.toast-top-left {
+  top: 0;
+  left: 0;
+}
+.toast.toast-top-right {
+  top: 0;
+  right: 0;
+}
+.toast.toast-bottom,
+.toast.toast-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.toast.toast-bottom-right {
+  bottom: 0;
+  right: 0;
+}
 /*
  * Styling for footers.
  */
