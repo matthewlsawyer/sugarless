@@ -19,10 +19,13 @@ angular.module("sugar.nav", [])
         tabs.push(tab);
       };
       this.clickTab = function(tab) {
-        angular.forEach(tabs, function(tab) {
-          tab.removeClass("selected");
-        });
-        tab.addClass("selected");
+        if (!tab.hasClass("selected")) {
+          angular.forEach(tabs, function(tab) {
+            if (tab.hasClass("selected"))
+              tab.removeClass("selected");
+          });
+          tab.addClass("selected");
+        }
       }
     }
   };
