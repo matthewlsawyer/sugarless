@@ -37,16 +37,15 @@ label {
 fieldset {
   margin : 0;
   margin-bottom : @margin;
-  border : 0;
   min-width : 0;
-  padding : @padding;
-  border : 1px solid @border-color;
-  border-radius : @border-radius;
-  background-color : @fill-color;
+  border : 0;
+  padding : 0;
+  background-color : transparent;
   legend {
     display : block;
     font-weight : bold;
-    margin-bottom : @margin;
+    font-size : @font-size + 1px;
+    margin-bottom : @margin - 2px;
   }
   > .form-group:last-child {
     margin-bottom : 0;

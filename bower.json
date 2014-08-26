@@ -22,7 +22,6 @@
   ],
   "devDependencies": {
     "normalize.css": "latest",
-    "font-awesome": "latest",
-    "angular": "~1.2.23"
+    "font-awesome": "latest"
   }
 }
