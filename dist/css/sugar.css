@@ -3560,6 +3560,10 @@ textarea {
 input {
   width: 200px;
 }
+input[type="range"] {
+  border: 0;
+  bacgkround-color: transparent;
+}
 select {
   cursor: pointer;
 }
