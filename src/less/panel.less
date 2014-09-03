@@ -5,16 +5,20 @@
   border : 1px solid @border-color;
   border-radius : @border-radius;
   margin-bottom : @margin;
-  & > .panel-header {
+  > .panel-header {
     padding : @padding;
     border-bottom : 1px solid @border-color;
     background-color : @panel-header-color;
+    // bottom margin sugar for nav tabs
+    > .nav-tabs {
+      margin-bottom : -@margin - 2px;
+    }
   }
-  & > .panel-body {
+  > .panel-body {
     padding : @padding;
     background-color : @panel-body-color;
   }
-  & > .panel-footer {
+  > .panel-footer {
     padding : @padding;
     border-top : 1px solid @border-color;
     background-color : @panel-footer-color;

@@ -1,0 +1,35 @@
+/*
+ * Inspired by material design
+ */
+
+/*
+ * Lifts the element on the z axis
+ */
+.lift {
+
+  transition : box-shadow .3s;
+  -webkit-transition : box-shadow .3s; 
+
+  &:hover,
+  &.lift-fourth {
+    box-shadow : 0 4px 4px 0 @paper-shadow-color;
+    -moz-box-shadow : 0 4px 4px 0 @paper-shadow-color;
+    -webkit-box-shadow : 0 4px 4px 0 @paper-shadow-color;
+  }
+
+  &.lift-half {
+    box-shadow : 0 6px 6px 0 @paper-shadow-color;
+    -moz-box-shadow : 0 6px 6px 0 @paper-shadow-color;
+    -webkit-box-shadow : 0 6px 6px 0 @paper-shadow-color;
+  }
+
+  &:active,
+  &.lift-full {
+    box-shadow : 0 10px 10px 0 @paper-shadow-color;
+    -moz-box-shadow : 0 10px 10px 0 @paper-shadow-color;
+    -webkit-box-shadow : 0 10px 10px 0 @paper-shadow-color;
+  }
+
+}
+
+
