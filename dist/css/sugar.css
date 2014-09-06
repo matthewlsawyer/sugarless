@@ -2011,6 +2011,9 @@ body {
   line-height: 1.42857143;
   color: #333333;
 }
+/**
+ * Images are responsive by default
+ */
 img {
   display: block;
   max-width: 100%;
@@ -2104,78 +2107,6 @@ img {
   background-color: #000000;
   opacity: 0.75;
   filter: alpha(opacity=75);
-}
-/**
- * Header styling
- */
-header,
-.header {
-  width: 100%;
-  height: 50px;
-  min-width: 800px;
-  position: relative;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
-  z-index: 100;
-}
-header.header-fixed,
-.header.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-header > .header-content,
-.header > .header-content {
-  width: inherit;
-  height: inherit;
-  position: relative;
-  padding: 5px;
-  overflow: hidden;
-  max-width: 960px;
-  min-width: 800px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-header > .header-content:before,
-.header > .header-content:before,
-header > .header-content:after,
-.header > .header-content:after {
-  content: " ";
-  display: table;
-}
-header > .header-content:after,
-.header > .header-content:after {
-  clear: both;
-}
-/**
- * Element to push the top of the page content 
- * down if a fixed header is used.
- */
-.header-fixed-push {
-  height: 50px;
-}
-/**
- * Buttons
- */
-button {
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  white-space: nowrap;
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 5px;
-  border: 1px solid #d0d0d0;
-  background-color: #e8e8e8;
-}
-button:hover,
-button:focus,
-button:active {
-  background-color: #cfcfcf;
-  border-color: #b7b7b7;
 }
 /**
  * A grid of rows and columns.
@@ -3525,6 +3456,126 @@ button:active {
   clear: both;
 }
 /**
+ * Header styling
+ */
+header,
+.header {
+  width: 100%;
+  height: 50px;
+  min-width: 800px;
+  position: relative;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #dddddd;
+  z-index: 100;
+}
+header.header-fixed,
+.header.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header > .header-content,
+.header > .header-content {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+  max-width: 960px;
+  min-width: 800px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+header > .header-content:before,
+.header > .header-content:before,
+header > .header-content:after,
+.header > .header-content:after {
+  content: " ";
+  display: table;
+}
+header > .header-content:after,
+.header > .header-content:after {
+  clear: both;
+}
+/**
+ * Element to push the top of the page content 
+ * down if a fixed header is used.
+ */
+.header-fixed-push {
+  height: 50px;
+}
+/*
+ * Styling for footers.
+ */
+footer,
+.footer {
+  width: 100%;
+  height: 50px;
+  min-width: 800px;
+  position: relative;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  z-index: 100;
+}
+footer.footer-sticky,
+.footer.footer-sticky {
+  position: absolute;
+  bottom: 0;
+}
+footer > .footer-content,
+.footer > .footer-content {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+  max-width: 960px;
+  min-width: 800px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+footer > .footer-content:before,
+.footer > .footer-content:before,
+footer > .footer-content:after,
+.footer > .footer-content:after {
+  content: " ";
+  display: table;
+}
+footer > .footer-content:after,
+.footer > .footer-content:after {
+  clear: both;
+}
+/**
+ * Element to push the footer down so it doesn't
+ * overlap the page content if a sticky footer is used.
+ */
+.footer-sticky-push {
+  height: 50px;
+}
+/**
+ * Buttons
+ */
+button {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+  background-color: #e8e8e8;
+}
+button:hover,
+button:focus,
+button:active {
+  background-color: #cfcfcf;
+  border-color: #b7b7b7;
+}
+/**
  * Panel component that contains data in a bordered panel.
  */
 .panel {
@@ -3537,8 +3588,34 @@ button:active {
   border-bottom: 1px solid #dddddd;
   background-color: #f5f5f5;
 }
+.panel > .panel-header.panel-header-carrot {
+  position: relative;
+}
+.panel > .panel-header.panel-header-carrot:before {
+  border-width: 8px;
+}
+.panel > .panel-header.panel-header-carrot:before,
+.panel > .panel-header.panel-header-carrot:after {
+  top: 13px;
+  right: 100%;
+  width: 0px;
+  height: 0px;
+  content: " ";
+  display: block;
+  position: absolute;
+  border-color: transparent;
+  border-style: solid solid outset;
+  border-right-color: #dddddd;
+}
+.panel > .panel-header.panel-header-carrot:after {
+  margin-top: 2px;
+  margin-left: 2px;
+  border-width: 6px;
+  border-right-color: #f5f5f5;
+}
 .panel > .panel-header > .nav-tabs {
-  margin-bottom: -7px;
+  margin-bottom: -6px;
+  border-bottom: none;
 }
 .panel > .panel-body {
   padding: 5px;
@@ -3894,54 +3971,6 @@ ul.nav.nav-pills > li:hover {
 .toast.toast-bottom-right {
   bottom: 0;
   right: 0;
-}
-/*
- * Styling for footers.
- */
-footer,
-.footer {
-  width: 100%;
-  height: 50px;
-  min-width: 800px;
-  position: relative;
-  background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
-  z-index: 100;
-}
-footer.footer-sticky,
-.footer.footer-sticky {
-  position: absolute;
-  bottom: 0;
-}
-footer > .footer-content,
-.footer > .footer-content {
-  width: inherit;
-  height: inherit;
-  position: relative;
-  padding: 5px;
-  overflow: hidden;
-  max-width: 960px;
-  min-width: 800px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-footer > .footer-content:before,
-.footer > .footer-content:before,
-footer > .footer-content:after,
-.footer > .footer-content:after {
-  content: " ";
-  display: table;
-}
-footer > .footer-content:after,
-.footer > .footer-content:after {
-  clear: both;
-}
-/**
- * Element to push the footer down so it doesn't
- * overlap the page content if a sticky footer is used.
- */
-.footer-sticky-push {
-  height: 50px;
 }
 /*
  * Inspired by material design
