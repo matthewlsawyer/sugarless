@@ -6,10 +6,10 @@ var rename  = require("gulp-rename");
 var minify  = require("gulp-minify-css");
 
 var paths = {
-  bowerDir : "bower_components/",
   lessSrc : "src/less/sugar.less",
   cssDest : "dist/css/",
   fontDest : "dist/fonts"
+  bowerDir : "bower_components/",
 };
 
 gulp.task("default", ["build"]);
