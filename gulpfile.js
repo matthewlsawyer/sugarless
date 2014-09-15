@@ -8,8 +8,8 @@ var minify  = require("gulp-minify-css");
 var paths = {
   lessSrc : "src/less/sugar.less",
   cssDest : "dist/css/",
-  fontDest : "dist/fonts"
-  bowerDir : "bower_components/",
+  fontDest : "dist/fonts",
+  bowerDir : "bower_components/"
 };
 
 gulp.task("default", ["build"]);
@@ -21,7 +21,7 @@ gulp.task("clean", function(cb) {
 });
 
 gulp.task("less", ["bower"], function() {
-  gulp.src(paths.lessSrc)
+  return gulp.src(paths.lessSrc)
   .pipe(less())
   .pipe(rename("sugar.css"))
   .pipe(gulp.dest(paths.cssDest))
@@ -31,7 +31,7 @@ gulp.task("less", ["bower"], function() {
 });
 
 gulp.task("fonts", ["bower"], function() {
-  gulp.src(paths.bowerDir + "font-awesome/fonts/*.*")
+  return gulp.src(paths.bowerDir + "font-awesome/fonts/*.*")
   .pipe(gulp.dest(paths.fontDest));
 });
 
