@@ -3797,6 +3797,24 @@ form .form-group textarea {
 form .form-group textarea {
   height: 69px;
 }
+form .form-stack .form-layer {
+  display: block;
+  width: 100%;
+}
+form .form-stack .form-layer:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+form .form-stack .form-layer:not(:last-child) {
+  border-bottom: none;
+}
+form .form-stack .form-layer:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+form .form-stack .form-layer:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 .input-group {
   display: table;
   height: 32px;

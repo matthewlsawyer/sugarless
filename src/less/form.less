@@ -5,7 +5,7 @@
 input,
 select,
 textarea {
-  height : @input-height; 
+  height : @input-height;
   padding : @input-padding;
   border: 1px solid @border-color;
   border-radius : @border-radius;
@@ -71,6 +71,27 @@ form {
       height : @input-height * 2 + @margin;
     }
   }
+
+  .form-stack {
+    .form-layer {
+      display : block;
+      width : 100%;
+      &:not(:first-child):not(:last-child) {
+        border-radius : 0;
+      }
+      &:not(:last-child) {
+        border-bottom : none;
+      }
+      &:first-child {
+        border-bottom-left-radius : 0;
+        border-bottom-right-radius : 0;
+      }
+      &:last-child {
+        border-top-left-radius : 0;
+        border-top-right-radius : 0;
+      }
+    }
+  }
 }
 
 .input-group {
@@ -81,7 +102,7 @@ form {
   table-layout : fixed;
   border : none;
   border-radius : @border-radius;
-  > input { 
+  > input {
     display : table-cell;
     border-radius : 0;
     &:first-child {
@@ -119,15 +140,15 @@ form {
 }
 
 .radio {
-  .input-type("radio"); 
+  .input-type("radio");
 }
 
 .checkbox {
-  .input-type("checkbox"); 
+  .input-type("checkbox");
 }
 
 .input-type(@type) {
-  @size : @font-height - 4px; 
+  @size : @font-height - 4px;
   position : relative;
   height : @font-height;
   // bottom margin so they stack
